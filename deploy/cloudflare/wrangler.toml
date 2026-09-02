@@ -1,0 +1,11 @@
+# Job Radar Telegram webhook — Cloudflare Workers free tier.
+# Deploy:  cd deploy/cloudflare && npx wrangler login && npx wrangler kv namespace create TAPS
+#          (paste the id below) && npx wrangler secret put TELEGRAM_SECRET_TOKEN
+#          && npx wrangler secret put DRAIN_TOKEN && npx wrangler secret put BOT_TOKEN && npx wrangler deploy
+name = "job-radar-telegram"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+[[kv_namespaces]]
+binding = "TAPS"
+id = "PASTE_KV_NAMESPACE_ID_HERE"

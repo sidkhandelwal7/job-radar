@@ -1,0 +1,23 @@
+# `docker compose up -d` — dashboard on :8787, a cycle every 15 minutes, nightly backup at 03:30.
+# Untested by the author (no Docker on the build machine); bare-metal + launchd is the primary path.
+services:
+  serve:
+    build: .
+    ports: ["127.0.0.1:8787:8787"]
+    volumes: ["./data:/app/data", "./config:/app/config", "./examples:/app/examples:ro"]
+    environment:
+      - TELEGRAM_BOT_TOKEN
+      - TELEGRAM_CHAT_ID
+      - RADAR_LLM_ENABLED=0      # no LLM CLI in the image; flip only with a mounted, logged-in CLI config directory
+    restart: unless-stopped
+  cycle:
+    build: .
+    volumes: ["./data:/app/data", "./config:/app/config", "./examples:/app/examples:ro"]
+    environment:
+      - TELEGRAM_BOT_TOKEN
+      - TELEGRAM_CHAT_ID
+      - RADAR_LLM_ENABLED=0
+    command: >
+      sh -c "radar init && while true; do radar cycle --quiet --skip-enrich;
+             if [ \"$$(date +%H%M)\" = \"0330\" ]; then radar nightly; fi; sleep 900; done"
+    restart: unless-stopped

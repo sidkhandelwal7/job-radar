@@ -1,0 +1,43 @@
+# Compensation priors — used ONLY when a posting has no posted range (§6d, §8.3). Every estimate
+# carries its source and a confidence; the UI never renders an estimate like a posted number.
+#
+# Cascade (first hit wins for base):
+#   1. posted range (Ashby structured / pay-transparency text)    confidence 0.90 / 0.75
+#   2. same company's recent posted ranges, same seniority+family  confidence 0.60
+#   3. DOL LCA prior (employer × SOC 15-1252 × metro, Level I/II)  confidence 0.45  (after `radar lca-refresh`)
+#   4. peer model from our own posted data (category × tier × metro bucket × seniority) confidence 0.35→0.20
+#
+# New-grad offers land low-to-mid in a posted range → point estimate at the 40th percentile of the range.
+
+version: 2026-08
+new_grad_point_in_range: 0.40
+inferred_new_grad_cap: 210000    # ceiling for NON-posted new-grad base estimates (top-of-market LCA Level II ≈ $195k)
+stretch_point_in_range: 0.55
+
+# Fallback when nothing else matches (US new-grad SWE, 2026 market; edit as you learn real numbers)
+global_new_grad_swe_base: { low: 85000, mid: 105000, high: 130000 }
+
+# Signing bonus / target bonus / equity priors by target category (annual $, before haircuts).
+# equity_type: rsu_public | rsu_private | options | none
+by_category:
+  big_tech_swe:           { signing: 15000, bonus_pct: 0.10, equity_type: rsu_public,  equity_annual: 40000 }
+  bank_and_exchange_tech: { signing: 7500,  bonus_pct: 0.10, equity_type: none,        equity_annual: 0 }
+  fintech_infrastructure: { signing: 10000, bonus_pct: 0.05, equity_type: rsu_private, equity_annual: 30000 }
+  elite_infra_startup:    { signing: 10000, bonus_pct: 0.00, equity_type: rsu_private, equity_annual: 35000 }
+  defense_and_gov_tech:   { signing: 10000, bonus_pct: 0.05, equity_type: rsu_private, equity_annual: 15000 }
+  quant_dev_research_trading: { signing: 25000, bonus_pct: 0.50, equity_type: none,    equity_annual: 0 }
+  ai_lab:                 { signing: 15000, bonus_pct: 0.00, equity_type: rsu_private, equity_annual: 60000 }
+  other:                  { signing: 5000,  bonus_pct: 0.05, equity_type: none,        equity_annual: 0 }
+
+# Public-company override: these registry tags mark public companies (equity_type → rsu_public)
+public_tags: [public, faang, big_tech, fortune100]
+
+haircuts:
+  signing: 0.50          # one-time, clawback-encumbered (§8.3)
+  rsu_private: 0.50      # D18 — illiquid, preference stack, cliff vs. a year-one cash baseline
+  options: 0.25
+  rsu_public: 1.00       # counted at annual vest value
+  bonus_target: 0.80     # targets are targets
+
+# Tier adjustments to the peer-model base (multiplicative), applied when the peer bucket has <5 samples
+tier_multiplier: { 1: 1.10, 2: 1.00, 3: 0.92 }

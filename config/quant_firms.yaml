@@ -1,0 +1,75 @@
+# §1c — hardcoded exclusion. Roles at these firms stay in the master list but get
+# winnability capped (modifiers.quant_trading_firm_winnability_cap) and NO finance-domain fit bonus.
+# A rotational-program title at the baseline employer is NEVER treated as evidence of quant
+# capability — `operator.treat_as_quant_candidate: false` is asserted in tests.
+#
+# Matching is on lowercase company-name substring; slugs are registry keys when present.
+
+quant_trading_firms:
+  - { name: Jane Street,              slug: jane-street,        aliases: [jane street] }
+  - { name: Citadel Securities,       slug: citadel-securities, aliases: [citadel securities] }
+  - { name: Citadel,                  slug: citadel,            aliases: [citadel] }
+  - { name: Hudson River Trading,     slug: hrt,                aliases: [hudson river trading, hrt] }
+  - { name: Two Sigma,                slug: two-sigma,          aliases: [two sigma] }
+  - { name: Jump Trading,             slug: jump-trading,       aliases: [jump trading, jump crypto] }
+  - { name: Optiver,                  slug: optiver,            aliases: [optiver] }
+  - { name: Susquehanna (SIG),        slug: sig,                aliases: [susquehanna, sig] }
+  - { name: IMC Trading,              slug: imc,                aliases: [imc trading, imc financial] }
+  - { name: DRW,                      slug: drw,                aliases: [drw] }
+  - { name: Akuna Capital,            slug: akuna,              aliases: [akuna] }
+  - { name: Five Rings,               slug: five-rings,         aliases: [five rings] }
+  - { name: Virtu Financial,          slug: virtu,              aliases: [virtu] }
+  - { name: Tower Research,           slug: tower-research,     aliases: [tower research] }
+  - { name: Flow Traders,             slug: flow-traders,       aliases: [flow traders] }
+  - { name: Radix Trading,            slug: radix,              aliases: [radix trading] }
+  - { name: Old Mission,              slug: old-mission,        aliases: [old mission] }
+  - { name: Belvedere Trading,        slug: belvedere,          aliases: [belvedere trading] }
+  - { name: Chicago Trading Company,  slug: ctc,                aliases: [chicago trading company, ctc trading] }
+  - { name: Wolverine Trading,        slug: wolverine,          aliases: [wolverine trading] }
+  - { name: Point72 / Cubist,         slug: point72,            aliases: [point72, cubist] }
+  - { name: Millennium,               slug: millennium,         aliases: [millennium management] }
+  - { name: D. E. Shaw,               slug: deshaw,             aliases: [d. e. shaw, de shaw, d.e. shaw] }
+  - { name: Renaissance Technologies, slug: rentech,            aliases: [renaissance technologies] }
+  - { name: AQR,                      slug: aqr,                aliases: [aqr capital] }
+  - { name: Squarepoint,              slug: squarepoint,        aliases: [squarepoint] }
+  - { name: Qube Research,            slug: qube,               aliases: [qube research] }
+  - { name: XTX Markets,              slug: xtx,                aliases: [xtx markets] }
+  - { name: Headlands,                slug: headlands,          aliases: [headlands tech] }
+  - { name: Aquatic Capital,          slug: aquatic,            aliases: [aquatic capital] }
+  - { name: Voleon,                   slug: voleon,             aliases: [voleon] }
+  - { name: PDT Partners,             slug: pdt,                aliases: [pdt partners] }
+  - { name: Maven Securities,         slug: maven,              aliases: [maven securities] }
+  - { name: Bridgewater,              slug: bridgewater,        aliases: [bridgewater] }
+  - { name: Balyasny,                 slug: balyasny,           aliases: [balyasny] }
+  - { name: Schonfeld,                slug: schonfeld,          aliases: [schonfeld] }
+  - { name: WorldQuant,               slug: worldquant,         aliases: [worldquant] }
+  - { name: Man Group,                slug: man-group,          aliases: [man group, man ahl] }
+  - { name: G-Research,               slug: g-research,         aliases: [g-research] }
+  - { name: TransMarket Group,        slug: tmg,                aliases: [transmarket] }
+  - { name: Geneva Trading,           slug: geneva-trading,     aliases: [geneva trading] }
+  - { name: Valkyrie Trading,         slug: valkyrie,           aliases: [valkyrie trading] }
+  - { name: Peak6,                    slug: peak6,              aliases: [peak6] }
+  - { name: 3Red Partners,            slug: 3red,               aliases: [3red] }
+  - { name: Quantlab,                 slug: quantlab,           aliases: [quantlab] }
+  - { name: GTS,                      slug: gts,                aliases: [gts securities] }
+  - { name: Mako,                     slug: mako,               aliases: [mako trading, mako group] }
+  - { name: Da Vinci Trading,         slug: davinci,            aliases: [da vinci derivatives] }
+  - { name: Aquatic Capital Management, slug: aquatic-capital,  aliases: [aquatic capital] }
+  - { name: BlackEdge Capital,        slug: blackedge,          aliases: [blackedge] }
+  - { name: Walleye Capital,          slug: walleye,            aliases: [walleye capital] }
+  - { name: HAP Capital,              slug: hap-capital,        aliases: [hap capital] }
+  - { name: Seven Eight Capital,      slug: seven-eight,        aliases: [seven eight capital] }
+  - { name: Vatic Labs,               slug: vatic,              aliases: [vatic labs, vatic investments] }
+  - { name: Group One Trading,        slug: group-one,          aliases: [group one trading] }
+  - { name: Marquette Partners,       slug: marquette,          aliases: [marquette partners] }
+  - { name: Gelber Group,             slug: gelber,             aliases: [gelber group] }
+  - { name: Cubist Systematic,        slug: cubist,             aliases: [cubist systematic] }
+  - { name: Engineers Gate,           slug: engineers-gate,     aliases: [engineers gate] }
+  - { name: Verition,                 slug: verition,           aliases: [verition] }
+  - { name: ExodusPoint,              slug: exoduspoint,        aliases: [exoduspoint] }
+  - { name: Jump Crypto,              slug: jump-crypto,        aliases: [jump crypto] }
+  - { name: Wintermute,               slug: wintermute,         aliases: [wintermute] }
+  - { name: GSR,                      slug: gsr,                aliases: [gsr markets] }
+  - { name: Eclipse Trading,          slug: eclipse-trading,    aliases: [eclipse trading] }
+  - { name: Trexquant,                slug: trexquant,          aliases: [trexquant] }
+  - { name: Qube RT,                  slug: qube-rt,            aliases: [qube rt] }

@@ -1,0 +1,78 @@
+# Job Radar — cloud BACKSTOP fetch + P0/P1 pre-score for the hours the laptop is asleep (§4).
+#
+# The laptop (launchd, every 15 min with catch-up-on-wake) is the primary fetch path. This job
+# exists so a closed lid doesn't mean a silent phone; it runs at a cadence that fits the private
+# repo free tier with room to spare. Arithmetic (DECISIONS.md D52): GitHub bills every job rounded
+# UP to a whole minute and private repos get 2,000 free minutes/month, so invocations ≈ minutes.
+#   weekdays 13:00–22:59 UTC every 30 min  → 20/day × ~22 days ≈ 440
+#   weekdays 02,05,08,11,23 UTC (overnight) →  5/day × ~22 days ≈ 110
+#   weekends every 4 h                      →  6/day × ~8.7 days ≈  52
+#   ≈ 600 invocations/month (< 800 target), i.e. ≈ 600–700 minutes if every job stays ≈1 min.
+# There is NO self-estimated minute guard: it trusted its own underestimate. `radar actions-usage`
+# reports the raw invocation count from actions/runs.jsonl (and real billing with a PAT); watch
+# Settings → Billing in GitHub for the number that matters.
+#
+# Nothing here calls an LLM. Unconfigured notification channels are an explicit no-op; real
+# delivery errors fail the job.
+name: fetch
+
+on:
+  schedule:
+    - cron: "0,30 13-22 * * 1-5"     # weekdays, US business hours (09:00–18:59 ET in EDT), every 30 min
+    - cron: "0 2,5,8,11,23 * * 1-5"  # weekdays overnight UTC, every 3 h
+    - cron: "0 */4 * * 0,6"          # weekends, every 4 h
+  workflow_dispatch: {}
+
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: "pyproject.toml"
+
+      - name: Install (no ML extras — this job never scores or embeds)
+        run: |
+          uv python install 3.12
+          uv venv --python 3.12 .venv
+          uv pip install -e .
+
+      - name: Fetch Tier-1 + aggregators, pre-score, write deltas (fails if ANY source fails)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: .venv/bin/radar actions-cycle
+
+      - name: Notify (explicit no-op when no channel is configured; delivery errors fail the job)
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: .venv/bin/radar actions-notify
+
+      - name: Commit state + deltas
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "job-radar[bot]"
+          git config user.email "job-radar@users.noreply.github.com"
+          git add actions/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "actions: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push
+          fi

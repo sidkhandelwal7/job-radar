@@ -1,0 +1,408 @@
+# Company registry. Mirrored into the `companies` / `company_sources` tables on every fetch.
+#
+# Fields:
+#   slug         registry key (stable; used in config.dream_list / floor_exempt_companies / blocked_companies)
+#   tier         1 = Tier-1 alert list (15-min), 2 = hourly, 3 = long tail (6h)
+#   category     target category from config.target_ranking
+#   quant_firm   true → §1c winnability cap, no finance-domain fit bonus
+#   sources      one or more ATS boards. slug formats: greenhouse/lever/ashby/workable/recruitee "slug";
+#                smartrecruiters "CompanyIdentifier"; workday "tenant/wdN/site"; oracle "host/siteNumber"
+#   enabled      false keeps the entry (alias matching still works) but never polls it
+#   sources: []  company is covered via the aggregator repos only (see `note`)
+#
+# This is a SAMPLE registry of public boards so a fresh clone fetches real postings. Tiers and
+# categories are illustrative — edit them for your own search. Auto-discovered employers land
+# in config/companies.discovered.yaml (same schema, tier 3, git-ignored until you promote them).
+# Optional per-company field `alumni_presence: strong|some|unknown` feeds the referral heuristic.
+
+version: 2026-08-sample
+companies:
+- slug: capital-one
+  name: Capital One
+  aliases:
+  - Capital One Financial
+  - CapitalOne
+  - Capital One Bank
+  tier: 1
+  category: bank_and_exchange_tech
+  hq_metro: washington_dc
+  tags:
+  - bank
+  - dc_metro
+  - fortune100
+  sources:
+  - provider: workday
+    slug: capitalone/wd12/Capital_One
+    careers_url: https://www.capitalonecareers.com
+- slug: jpmorgan
+  name: JPMorgan Chase
+  aliases:
+  - JPMorgan Chase & Co.
+  - JPMorganChase
+  - JP Morgan
+  - JPMC
+  - J.P. Morgan
+  - Chase
+  tier: 1
+  category: bank_and_exchange_tech
+  hq_metro: new_york
+  tags:
+  - bank
+  - nyc
+  - fortune100
+  sources:
+  - provider: oracle
+    slug: jpmc.fa.oraclecloud.com/CX_1001
+    careers_url: https://careers.jpmorgan.com
+- slug: mastercard
+  name: Mastercard
+  aliases:
+  - MasterCard
+  - Mastercard Incorporated
+  - Mastercard Technologies
+  tier: 1
+  category: bank_and_exchange_tech
+  hq_metro: new_york
+  tags:
+  - payments
+  - network
+  - nyc
+  - st_louis
+  sources:
+  - provider: workday
+    slug: mastercard/wd1/CorporateCareers
+    careers_url: https://careers.mastercard.com
+- slug: google
+  name: Google
+  aliases:
+  - Alphabet
+  - Google LLC
+  - YouTube
+  - DeepMind
+  - Waymo (Alphabet)
+  tier: 1
+  category: big_tech_swe
+  hq_metro: san_francisco
+  tags:
+  - faang
+  - big_tech
+  note: No documented careers API. Covered via aggregator repos.
+  sources: []
+- slug: meta
+  name: Meta
+  aliases:
+  - Meta Platforms
+  - Facebook
+  - Instagram
+  - WhatsApp
+  - Oculus
+  - Reality Labs
+  tier: 1
+  category: big_tech_swe
+  hq_metro: san_francisco
+  tags:
+  - faang
+  - big_tech
+  note: No direct adapter — metacareers.com robots.txt forbids automated collection (PLAN §2.3). Covered
+    via aggregator repos.
+  sources: []
+- slug: amazon
+  name: Amazon
+  tier: 1
+  category: big_tech_swe
+  hq_metro: seattle
+  aliases:
+  - Amazon Web Services
+  - AWS
+  - Amazon.com
+  tags:
+  - faang
+  - big_tech
+  sources: []
+  note: No public JSON careers API that passes §17 (robots / documented). Covered via aggregator repos.
+- slug: apple
+  name: Apple
+  tier: 1
+  category: big_tech_swe
+  hq_metro: san_francisco
+  aliases:
+  - Apple Inc.
+  tags:
+  - faang
+  - big_tech
+  sources: []
+  note: No public JSON careers API that passes §17 (robots / documented). Covered via aggregator repos.
+- slug: microsoft
+  name: Microsoft
+  tier: 1
+  category: big_tech_swe
+  hq_metro: seattle
+  aliases:
+  - Microsoft Corporation
+  tags:
+  - faang
+  - big_tech
+  sources: []
+  note: No public JSON careers API that passes §17 (robots / documented). Covered via aggregator repos.
+- slug: stripe
+  name: Stripe
+  tier: 1
+  category: fintech_infrastructure
+  hq_metro: san_francisco
+  tags:
+  - payments
+  - late_stage
+  sources:
+  - provider: greenhouse
+    slug: stripe
+- slug: brex
+  name: Brex
+  tier: 1
+  category: fintech_infrastructure
+  hq_metro: san_francisco
+  sources:
+  - provider: greenhouse
+    slug: brex
+- slug: ramp
+  name: Ramp
+  tier: 1
+  category: fintech_infrastructure
+  hq_metro: new_york
+  sources:
+  - provider: ashby
+    slug: ramp
+- slug: palantir
+  name: Palantir
+  tier: 1
+  category: defense_and_gov_tech
+  hq_metro: denver
+  aliases:
+  - Palantir Technologies
+  sources:
+  - provider: lever
+    slug: palantir
+- slug: datadog
+  name: Datadog
+  tier: 2
+  category: elite_infra_startup
+  hq_metro: new_york
+  tags:
+  - public
+  - nyc
+  sources:
+  - provider: greenhouse
+    slug: datadog
+- slug: cloudflare
+  name: Cloudflare
+  tier: 2
+  category: elite_infra_startup
+  hq_metro: san_francisco
+  tags:
+  - public
+  sources:
+  - provider: greenhouse
+    slug: cloudflare
+- slug: notion
+  name: Notion
+  tier: 2
+  category: big_tech_swe
+  hq_metro: san_francisco
+  sources:
+  - provider: ashby
+    slug: notion
+- slug: anthropic
+  name: Anthropic
+  tier: 1
+  category: ai_lab
+  hq_metro: san_francisco
+  sources:
+  - provider: greenhouse
+    slug: anthropic
+- slug: openai
+  name: OpenAI
+  tier: 1
+  category: ai_lab
+  hq_metro: san_francisco
+  sources:
+  - provider: ashby
+    slug: openai
+- slug: databricks
+  name: Databricks
+  tier: 1
+  category: elite_infra_startup
+  hq_metro: san_francisco
+  tags:
+  - late_stage
+  - data
+  sources:
+  - provider: greenhouse
+    slug: databricks
+- slug: nvidia
+  name: NVIDIA
+  aliases:
+  - Nvidia Corporation
+  tier: 1
+  category: big_tech_swe
+  hq_metro: san_francisco
+  tags:
+  - big_tech
+  - semis
+  - ai
+  sources:
+  - provider: workday
+    slug: nvidia/wd5/NVIDIAExternalCareerSite
+    careers_url: https://www.nvidia.com/en-us/about-nvidia/careers/
+- slug: jane-street
+  name: Jane Street
+  tier: 1
+  category: quant_dev_research_trading
+  quant_firm: true
+  hq_metro: new_york
+  sources:
+  - provider: greenhouse
+    slug: janestreet
+- slug: plaid
+  name: Plaid
+  tier: 1
+  category: fintech_infrastructure
+  hq_metro: san_francisco
+  sources:
+  - provider: ashby
+    slug: plaid
+- slug: affirm
+  name: Affirm
+  tier: 2
+  category: fintech_infrastructure
+  hq_metro: san_francisco
+  tags:
+  - public
+  - remote_first
+  sources:
+  - provider: greenhouse
+    slug: affirm
+- slug: robinhood
+  name: Robinhood
+  tier: 2
+  category: fintech_infrastructure
+  hq_metro: san_francisco
+  tags:
+  - public
+  sources:
+  - provider: greenhouse
+    slug: robinhood
+- slug: coinbase
+  name: Coinbase
+  tier: 1
+  category: fintech_infrastructure
+  hq_metro: remote
+  tags:
+  - crypto
+  - public
+  sources:
+  - provider: greenhouse
+    slug: coinbase
+- slug: samsara
+  name: Samsara
+  tier: 2
+  category: elite_infra_startup
+  hq_metro: san_francisco
+  sources:
+  - provider: greenhouse
+    slug: samsara
+- slug: figma
+  name: Figma
+  tier: 2
+  category: big_tech_swe
+  hq_metro: san_francisco
+  sources:
+  - provider: greenhouse
+    slug: figma
+- slug: airbnb
+  name: Airbnb
+  tier: 2
+  category: big_tech_swe
+  hq_metro: san_francisco
+  sources:
+  - provider: greenhouse
+    slug: airbnb
+- slug: lyft
+  name: Lyft
+  tier: 2
+  category: big_tech_swe
+  hq_metro: san_francisco
+  sources:
+  - provider: greenhouse
+    slug: lyft
+- slug: netflix
+  name: Netflix
+  tier: 1
+  category: big_tech_swe
+  hq_metro: los_angeles
+  tags:
+  - faang
+  - big_tech
+  sources: []
+  note: No public JSON careers API that passes §17 (robots / documented). Covered via aggregator repos.
+- slug: citi
+  name: Citi
+  tier: 2
+  category: bank_and_exchange_tech
+  hq_metro: new_york
+  aliases:
+  - Citigroup
+  - Citibank
+  sources:
+  - provider: workday
+    slug: citi/wd5/2
+- slug: wells-fargo
+  name: Wells Fargo
+  tier: 2
+  category: bank_and_exchange_tech
+  hq_metro: san_francisco
+  tags:
+  - bank
+  - charlotte
+  sources:
+  - provider: workday
+    slug: wf/wd1/WellsFargoJobs
+- slug: blackrock
+  name: BlackRock
+  tier: 2
+  category: bank_and_exchange_tech
+  hq_metro: new_york
+  tags:
+  - asset_manager
+  - aladdin
+  - nyc
+  sources:
+  - provider: workday
+    slug: blackrock/wd1/BlackRock_Professional
+- slug: nasdaq
+  name: Nasdaq
+  tier: 1
+  category: bank_and_exchange_tech
+  hq_metro: new_york
+  tags:
+  - exchange
+  - nyc
+  sources:
+  - provider: workday
+    slug: nasdaq/wd1/Global_External_Site
+- slug: leidos
+  name: Leidos
+  tier: 3
+  category: defense_and_gov_tech
+  hq_metro: washington_dc
+  sources:
+  - provider: workday
+    slug: leidos/wd5/External
+- slug: anduril
+  name: Anduril
+  aliases:
+  - Anduril Industries
+  tier: 1
+  category: defense_and_gov_tech
+  hq_metro: costa_mesa
+  sources:
+  - provider: greenhouse
+    slug: andurilindustries

@@ -1,0 +1,3385 @@
+note: Hand-labeled on 2026-08-20 from real postings (snapshot). is_duplicate=true means the two rows point at the SAME req. Extended 2026-08-21 with the metro-unknown / family-unknown aggregator class (review
+  finding 9) plus matching negatives.
+pairs:
+- a: 32635
+  b: 56609
+  is_duplicate: true
+  note: Simplify row → Argonne Workday req (same id)
+- a: 12208
+  b: 33210
+  is_duplicate: true
+  note: Freddie Mac Workday ↔ Simplify (same JR id)
+- a: 32550
+  b: 43771
+  is_duplicate: true
+  note: AHEAD Simplify ↔ Lever (same uuid)
+- a: 31508
+  b: 43799
+  is_duplicate: true
+  note: same SmartRecruiters id, retitled
+- a: 34820
+  b: 38722
+  is_duplicate: true
+  note: Harvey zapply ↔ Ashby (same uuid)
+- a: 35582
+  b: 38492
+  is_duplicate: true
+  note: Palantir zapply ↔ Lever
+- a: 35438
+  b: 36468
+  is_duplicate: true
+  note: OpenAI zapply (truncated title) ↔ Ashby
+- a: 33775
+  b: 43849
+  is_duplicate: true
+  note: same SmartRecruiters id, 8-year-old evergreen req
+- a: 4312
+  b: 32266
+  is_duplicate: true
+  note: IMC Greenhouse (Chicago) ↔ Simplify row
+- a: 34774
+  b: 35374
+  is_duplicate: true
+  note: same Workday req in two zapply repos
+- a: 34583
+  b: 35182
+  is_duplicate: true
+  note: same NVIDIA req in two zapply repos
+- a: 27074
+  b: 31936
+  is_duplicate: true
+  note: NVIDIA Workday ↔ Simplify (same JR id, title variant)
+- a: 18991
+  b: 32399
+  is_duplicate: true
+  note: JPMC Oracle ↔ Simplify
+- a: 32927
+  b: 57234
+  is_duplicate: true
+  note: Artera Simplify ↔ Lever
+- a: 7767
+  b: 30814
+  is_duplicate: true
+  note: Roblox careers page ↔ jobright mirror, same title/metro/week
+- a: 31178
+  b: 33931
+  is_duplicate: true
+  note: TikTok jobright ↔ lifeattiktok, same title/metro/week
+- a: 14270
+  b: 31141
+  is_duplicate: true
+  note: State Street Workday ↔ jobright
+- a: 30891
+  b: 32728
+  is_duplicate: true
+  note: Traba jobright ↔ Ashby
+- a: 8623
+  b: 30861
+  is_duplicate: true
+  note: Samsara careers page ↔ jobright
+- a: 15677
+  b: 30817
+  is_duplicate: true
+  note: Salesforce Workday AMTS ↔ jobright
+- a: 26629
+  b: 31420
+  is_duplicate: true
+  note: NVIDIA Formal Verification NCG Workday ↔ jobright
+- a: 33431
+  b: 33438
+  is_duplicate: false
+  note: 'TikTok: two distinct req ids, same title (different teams)'
+- a: 33432
+  b: 33435
+  is_duplicate: false
+  note: 'TikTok Seattle: two distinct req ids'
+- a: 32210
+  b: 32526
+  is_duplicate: false
+  note: 'SIG: iCIMS 11021 vs 11022'
+- a: 32918
+  b: 32919
+  is_duplicate: false
+  note: 'Trillium: distinct gh_jid'
+- a: 32918
+  b: 34346
+  is_duplicate: false
+  note: 'Trillium: distinct gh_jid'
+- a: 30853
+  b: 34101
+  is_duplicate: false
+  note: SpaceX telemetry vs new-grad Starlink
+- a: 31067
+  b: 31117
+  is_duplicate: false
+  note: Amazon SDE vs SDE Database
+- a: 31143
+  b: 31369
+  is_duplicate: false
+  note: Capgemini junior vs regular
+- a: 31950
+  b: 33940
+  is_duplicate: false
+  note: ByteDance experienced vs graduate
+- a: 33999
+  b: 34003
+  is_duplicate: false
+  note: 'V2X: careers.gov2x.com 61950 vs 61951'
+- a: 30746
+  b: 30747
+  is_duplicate: false
+  note: 'Adobe: ADOBUSR159163 vs 159933'
+- a: 32003
+  b: 32036
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32022
+  b: 32041
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 31992
+  b: 32036
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 31992
+  b: 32034
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32019
+  b: 32371
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32007
+  b: 32034
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32007
+  b: 32374
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32007
+  b: 32016
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 31994
+  b: 32372
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32005
+  b: 32030
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32026
+  b: 32035
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32017
+  b: 32374
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 32374
+  b: 32375
+  is_duplicate: false
+  note: 'Innodata: distinct Greenhouse ids'
+- a: 30957
+  b: 31253
+  is_duplicate: false
+  note: RTX SWE I test solutions vs aircraft interiors
+- a: 35030
+  b: 35031
+  is_duplicate: false
+  note: Verizon R-1099907 vs R-1099906-1
+- a: 31881
+  b: 31946
+  is_duplicate: false
+  note: GDMS software vs hardware systems
+- a: 31086
+  b: 33422
+  is_duplicate: false
+  note: 'Northrop: different titles'
+- a: 31597
+  b: 31841
+  is_duplicate: false
+  note: RTX SWE 2 vs SWE 1
+- a: 34295
+  b: 34296
+  is_duplicate: false
+  note: 'CROSSMARK: distinct SmartRecruiters ids'
+- a: 32249
+  b: 32662
+  is_duplicate: false
+  note: 'Palo Alto: JR-011524 vs JR-011532'
+- a: 34834
+  b: 34836
+  is_duplicate: false
+  note: 'Applied Intuition: enterprise vs embedded security'
+- a: 32298
+  b: 32304
+  is_duplicate: false
+  note: 'Welo: distinct Lever ids'
+- a: 31524
+  b: 31537
+  is_duplicate: false
+  note: Java vs .Net developer
+- a: 31570
+  b: 32454
+  is_duplicate: false
+  note: 'Micron: distinct JR ids'
+- a: 31518
+  b: 31530
+  is_duplicate: false
+  note: 'DellFor: distinct SmartRecruiters ids'
+- a: 33154
+  b: 33435
+  is_duplicate: false
+  note: TikTok search vs reco
+- a: 34439
+  b: 298332
+  is_duplicate: true
+  note: 'Seeq: aggregator (metro remote) ↔ Workable (us_unknown), same code 6F40FF632B — the metro-mismatch class'
+- a: 33569
+  b: 57057
+  is_duplicate: true
+  note: 'Arondite: aggregator ↔ Workable, both metro unknown, same code 4DB1A60B2B'
+- a: 33571
+  b: 174802
+  is_duplicate: true
+  note: 'Homey: aggregator ↔ Workable, same code 50DF9B3D53, punctuation-only title diff'
+- a: 33495
+  b: 239231
+  is_duplicate: true
+  note: 'Luminance: aggregator ↔ Workable, same code 9C39B34AB3'
+- a: 33587
+  b: 126591
+  is_duplicate: true
+  note: 'Fifty-Five: aggregator ↔ Workable, same code F21A38FE9E, nontech family'
+- a: 33499
+  b: 52607
+  is_duplicate: true
+  note: 'AlphaHire: aggregator (remote, family unknown) ↔ Workable (us_unknown), same code 0ABEFABB05'
+- a: 33576
+  b: 98337
+  is_duplicate: false
+  note: 'Christie: same title, DIFFERENT Workable code B89AE72B33 — a second req, not a copy'
+- a: 31517
+  b: 115923
+  is_duplicate: false
+  note: 'DellFor: aggregator (metro unknown) ↔ SmartRecruiters NYC, different req ids, 10 years apart'
+- a: 32850
+  b: 259744
+  is_duplicate: false
+  note: 'Motorola: aggregator (metro unknown; Glasgow R66979) ↔ Workday Chicago R66351 — different reqs'
+- a: 32850
+  b: 259423
+  is_duplicate: false
+  note: 'Motorola: aggregator ↔ Workday Allen TX R67011 (us_unknown metro) — different reqs'
+postings:
+- id: 4312
+  company_id: 52
+  company_name: IMC Trading
+  title: Graduate Machine Learning Researcher - Chicago
+  title_normalized: graduate machine learning researcher chicago
+  primary_metro: chicago
+  role_family: ml_ai
+  seniority: new_grad
+  source: company_direct
+  source_provider: greenhouse
+  source_slug: imc
+  source_job_id: '4907416101'
+  apply_url: https://job-boards.eu.greenhouse.io/imc/jobs/4907416101
+  canonical_url: https://job-boards.greenhouse.io/imc/jobs/4907416101
+  description_md: 'As a Graduate Machine Learning Researcher at IMC, your work will directly impact our global trading strategies. You will apply advanced machine learning, statistical, and computational
+    techniques to solve complex, real-world trading problems, contributing to trading strategies across global equities, futures, and options markets. Machine Learning Researchers work closely with Traders
+    and Developers in an environment where problem solving, innovation and teamwork are recognized and rewarded.
+
+
+    **Your Core Responsibilities:**
+
+
+    * Design, implement, and evaluate machine learning models for trading applications, with successful research deployed into production
+
+    * Apply rigorous statistical techniques to measure performance, control overfitting, and understand model risk and interpretability
+
+    * Investigate novel machine learning approaches through rigorous experimentation and analysis in real trading environments
+
+    * Communicate research progress and outcomes effectively, ensuring knowledge transfer within the team and across departments
+
+    * Collaborate closely with traders, researchers, and engineers to translate research into production trading systems
+
+
+    **Your Skills and Experience:**
+
+
+    * PhD in Machine Learning, Computer Science, Electrical Engineering, Mathematics, Statistics, Physics or a related quantitative field
+
+    * Strong foundations in machine learning, probability, and statistics, with experience applying advanced ML techniques to solve challenging research or real-world problems'
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-01T17:17:42Z'
+  first_seen_at: '2026-08-20T20:05:00Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 7767
+  company_id: 12
+  company_name: Roblox
+  title: Software Engineer, Account Authentication
+  title_normalized: software engineer account authentication
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: unknown
+  source: company_direct
+  source_provider: greenhouse
+  source_slug: roblox
+  source_job_id: '8097701'
+  apply_url: https://careers.roblox.com/jobs/8097701?gh_jid=8097701
+  canonical_url: https://job-boards.greenhouse.io/roblox/jobs/8097701
+  description_md: "Every day, tens of millions of people come to Roblox to explore, create, play, learn, and connect with friends in 3D immersive digital experiences– all created by our global community\
+    \ of developers and creators. \n\nAt Roblox, we’re building the tools and platform that empower our community to bring any experience that they can imagine to life. Our vision is to reimagine the way\
+    \ people come together, from anywhere in the world, and on any device.We’re on a mission to connect a billion people with optimism and civility, and looking for amazing talent to help us get there.\
+    \ \n\nA career at Roblox means you’ll be working to shape the future of human interaction, solving unique technical challenges at scale, and helping to create safer, more civil shared experiences for\
+    \ everyone.\n\nAs a Software Engineer on the Account Authentication Team, you will help authenticate and authorize Roblox's user base, setting the foundation for every other feature on our platform.\
+    \   \nYou will build the authentication and security controls that meet each user's needs, along with just-in-time friction that adapts to each user's unique risk profile, all while scaling to 1 billion\
+    \ active users.\n\nThis is a rare opportunity to sit at the convergence of security, user experience, and scale. You'll join Roblox's Safety organization, whose mission is to become the leader in civil\
+    \ immersive online communities by detecting, removing, and preventing problematic accounts, content, and behavior, and by keeping account"
+  base_posted_min: 153120.0
+  base_posted_max: 196750.0
+  posted_at: '2026-08-12T16:11:42Z'
+  first_seen_at: '2026-08-20T20:05:31Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 8623
+  company_id: 46
+  company_name: Samsara
+  title: Software Engineer I (New Grad)
+  title_normalized: software engineer i new grad
+  primary_metro: null
+  role_family: software_engineering
+  seniority: new_grad
+  source: company_direct
+  source_provider: greenhouse
+  source_slug: samsara
+  source_job_id: '8097345'
+  apply_url: https://www.samsara.com/company/careers/roles/8097345?gh_jid=8097345
+  canonical_url: https://job-boards.greenhouse.io/samsara/jobs/8097345
+  description_md: '**Who we are**
+
+
+    Samsara (NYSE: IOT) is the pioneer of the Connected Operations™ Cloud, which is a platform that enables organizations that depend on physical operations to harness Internet of Things (IoT) data to develop
+    actionable insights and improve their operations. At Samsara, we are helping improve the safety, efficiency and sustainability of the physical operations that power our global economy. Representing
+    more than 40% of global GDP, these industries are the infrastructure of our planet, including agriculture, construction, field services, transportation, and manufacturing — and we are excited to help
+    digitally transform their operations at scale.
+
+
+    Working at Samsara means you’ll help define the future of physical operations and be on a team that’s shaping an exciting array of product solutions, including Video-Based Safety, Vehicle Telematics,
+    Apps and Driver Workflows, and Equipment Monitoring. As part of a recently public company, you’ll have the autonomy and support to make an impact as we build for the long term.
+
+
+    **About the role:**
+
+
+    Are you a recent or upcoming graduate ready to launch your career at the forefront of industrial IoT? Join us and help shape the future of connected operations. You will immediately dive into challenging,
+    real-world projects with the freedom and responsibility of a full-time engineer. We believe in providing a **greenfield opportunity for growth** and a high degree of **ownership** from day one. You
+    will build and innovate, making'
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-05T14:14:03Z'
+  first_seen_at: '2026-08-20T20:06:00Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 12208
+  company_id: 24
+  company_name: Freddie Mac
+  title: Single Family Data Analyst
+  title_normalized: single family data analyst
+  primary_metro: washington_dc
+  role_family: data_science
+  seniority: unknown
+  source: company_direct
+  source_provider: workday
+  source_slug: freddiemac/wd5/External
+  source_job_id: JR17440
+  apply_url: https://freddiemac.wd5.myworkdayjobs.com/en-US/External/job/McLean-VA/Single-Family-Data-Analyst_JR17440
+  canonical_url: https://freddiemac.wd5.myworkdayjobs.com/en-US/External/job/McLean-VA/Single-Family-Data-Analyst_JR17440
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-03T20:51:27Z'
+  first_seen_at: '2026-08-20T20:08:45Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 14270
+  company_id: 19
+  company_name: State Street
+  title: Software Engineer, CRD- New Graduate
+  title_normalized: software engineer crd new graduate
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: company_direct
+  source_provider: workday
+  source_slug: statestreet/wd1/Global
+  source_job_id: R-795953
+  apply_url: https://statestreet.wd1.myworkdayjobs.com/Global/job/Burlington-Massachusetts/Software-Engineer--CRD--New-Graduate_R-795953
+  canonical_url: https://statestreet.wd1.myworkdayjobs.com/en-US/Global/job/Burlington-Massachusetts/Software-Engineer--CRD--New-Graduate_R-795953
+  description_md: 'Job Description
+
+
+    **Who We are:**
+
+
+    **Charles River Development (CRD)** is the FinTech division of State Street.  Together with State Street’s Middle and Back-office services, Charles River’s cloud-based Front Office technology forms
+    the foundation of the **State Street Alpha® Platform**, the first front-to-back solution in the industry.
+
+
+    **CRD / Alpha® Platform Engineering** organization is innovating and transforming the platform by moving away from monolithic software to utilizing next generation cloud-based technology that leverages
+    Microsoft Azure, Kafka, Snowflake, etc.
+
+
+    **Position Summary:**
+
+
+    Be an integral part of an agile organization and contribute to the development of one or more CRD/Alpha Platform modules. Junior engineers will receive coaching and guidance from senior engineers and
+    leadership as they develop their skills and contribute to the team.
+
+
+    We will match candidate’s existing knowledge and career interest to the company’s priorities to help you build knowledge and practical hands-on experience in one or several of the areas below:
+
+
+    * Full Stack Development
+
+    * Front-end UI/UX development
+
+    * DevOps
+
+    * Database Engineering
+
+
+    **Responsibilities:**
+
+
+    * Under guidance of senior engineers contribute to analysis, design, development, testing, and debugging large and complex software enhancements and solutions within the CRD/Alpha Platform domains including
+    modifications to core frameworks and other primary facilities critical to system operation
+
+    * Collaborate with Busi'
+  base_posted_min: 52000.0
+  base_posted_max: 91000.0
+  posted_at: '2026-08-11T00:00:00Z'
+  first_seen_at: '2026-08-20T20:10:17Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 15677
+  company_id: 8
+  company_name: Salesforce
+  title: Software Engineering AMTS (College Grad)
+  title_normalized: software engineering amts college grad
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: new_grad
+  source: company_direct
+  source_provider: workday
+  source_slug: salesforce/wd12/External_Career_Site
+  source_job_id: JR355250
+  apply_url: https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Software-Engineering-AMTS--College-Grad-_JR355250-1
+  canonical_url: https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Software-Engineering-AMTS--College-Grad-_JR355250-1
+  description_md: "*To get the best candidate experience, please consider applying for a maximum of 3 roles within 12 months to ensure you are not duplicating efforts.*\n\n****About Futureforce University\
+    \ Recruiting****\n\nOur Futureforce University Recruiting program is dedicated to attracting, retaining and cultivating talent. Our interns and new graduates work on real projects that affect how our\
+    \ business runs, giving them the opportunity to make a tangible impact on the future of our company. With offices all over the world, our recruits have the chance to collaborate and connect with fellow\
+    \ employees on a global scale. We offer job shadowing, mentorship programs, talent development courses, and much more.\n\n**Job Category**\n\nSoftware Engineering\n\n**Job Details**\n\n****About Salesforce****\n\
+    \nSalesforce is the #1 AI CRM, where humans with agents drive customer success together. Here, ambition meets action. Tech meets trust. And innovation isn’t a buzzword — it’s a way of life. The world\
+    \ of work as we know it is changing and we're looking for Trailblazers who are passionate about bettering business and the world through AI, driving innovation, and keeping Salesforce's core values\
+    \ at the heart of it all.\n\nReady to level-up your career at the company leading workforce transformation in the agentic era? You’re in the right place! Agentforce is the future of AI, and you are\
+    \ the future of Salesforce.\n\n**The Experience**  \n  \nWant your line of code to have a significant and measurable positive impact for "
+  base_posted_min: 110000.0
+  base_posted_max: 153000.0
+  posted_at: '2026-08-06T00:00:00Z'
+  first_seen_at: '2026-08-20T20:10:52Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 18991
+  company_id: 2
+  company_name: JPMorgan Chase
+  title: Quantitative Trading & Research - RMBS Underwriting - Analyst
+  title_normalized: quantitative trading and research rmbs underwriting analyst
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: company_direct
+  source_provider: oracle
+  source_slug: jpmc.fa.oraclecloud.com/CX_1001
+  source_job_id: '210768112'
+  apply_url: https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768112
+  canonical_url: https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768112
+  description_md: Join our dynamic team as a Desk Strategist supporting a market-leading RMBS underwriting business.
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-14T00:00:00Z'
+  first_seen_at: '2026-08-20T20:13:08Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 26629
+  company_id: 7
+  company_name: NVIDIA
+  title: Formal Verification Engineer - New College Grad 2026
+  title_normalized: formal verification engineer new college grad 2026
+  primary_metro: san_francisco
+  role_family: hardware
+  seniority: new_grad
+  source: company_direct
+  source_provider: workday
+  source_slug: nvidia/wd5/NVIDIAExternalCareerSite
+  source_job_id: JR2020837
+  apply_url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Formal-Verification-Engineer---New-College-Grad-2026_JR2020837
+  canonical_url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Formal-Verification-Engineer---New-College-Grad-2026_JR2020837
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-21T20:50:43Z'
+  first_seen_at: '2026-08-20T20:13:55Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 27074
+  company_id: 7
+  company_name: NVIDIA
+  title: Cell Modeling and Verification Engineer - New College Grad 2026
+  title_normalized: cell modeling and verification engineer new college grad 2026
+  primary_metro: san_francisco
+  role_family: hardware
+  seniority: new_grad
+  source: company_direct
+  source_provider: workday
+  source_slug: nvidia/wd5/NVIDIAExternalCareerSite
+  source_job_id: JR2011631
+  apply_url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Cell-Modelling-and-Verification-Engineer---New-College-Grad-2026_JR2011631
+  canonical_url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Cell-Modelling-and-Verification-Engineer---New-College-Grad-2026_JR2011631
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-21T20:50:43Z'
+  first_seen_at: '2026-08-20T20:13:55Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30746
+  company_id: 9
+  company_name: Adobe
+  title: 'New Grad 2026: Software Engineer'
+  title_normalized: new grad 2026 software engineer
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: vanshb03/New-Grad-2027
+  source_job_id: 635df20720ce74ec
+  apply_url: https://careers.adobe.com/us/en/job/ADOBUSR159163EXTERNALENUS/2026-University-Graduate-Software-Engineer
+  canonical_url: https://careers.adobe.com/us/en/job/ADOBUSR159163EXTERNALENUS/2026-University-Graduate-Software-Engineer
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2025-09-12T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:32Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30747
+  company_id: 9
+  company_name: Adobe
+  title: 'New Grad 2026: Software Engineer'
+  title_normalized: new grad 2026 software engineer
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: vanshb03/New-Grad-2027
+  source_job_id: e7cc550896a4818d
+  apply_url: https://careers.adobe.com/us/en/job/ADOBUSR159933EXTERNALENUS/2026-University-Graduate-Software-Engineer
+  canonical_url: https://careers.adobe.com/us/en/job/ADOBUSR159933EXTERNALENUS/2026-University-Graduate-Software-Engineer
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2025-09-12T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:32Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30814
+  company_id: 12
+  company_name: Roblox
+  title: Software Engineer, Account Authentication
+  title_normalized: software engineer account authentication
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: unknown
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 984ae05bc4806ae9
+  apply_url: https://jobright.ai/jobs/info/6a7c9f32d77e8156a8e32f9f
+  canonical_url: https://jobright.ai/jobs/info/6a7c9f32d77e8156a8e32f9f
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30817
+  company_id: 8
+  company_name: Salesforce
+  title: Software Engineering AMTS (College Grad)
+  title_normalized: software engineering amts college grad
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 45d7b856d0dd0f18
+  apply_url: https://jobright.ai/jobs/info/6a748ffbbb6ca93ae560a960
+  canonical_url: https://jobright.ai/jobs/info/6a748ffbbb6ca93ae560a960
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30853
+  company_id: null
+  company_name: SpaceX
+  title: Software Engineer, Telemetry (Starlink)
+  title_normalized: software engineer telemetry starlink
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: unknown
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 33e3cfcd2c515bd7
+  apply_url: https://jobright.ai/jobs/info/6a6a2f38c63ba56308f51c76
+  canonical_url: https://jobright.ai/jobs/info/6a6a2f38c63ba56308f51c76
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30861
+  company_id: 46
+  company_name: Samsara
+  title: Software Engineer I (New Grad)
+  title_normalized: software engineer i new grad
+  primary_metro: null
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: dd25a3ebe8b526f1
+  apply_url: https://jobright.ai/jobs/info/6a8711ef4afae74a0834666e
+  canonical_url: https://jobright.ai/jobs/info/6a8711ef4afae74a0834666e
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30891
+  company_id: null
+  company_name: Traba
+  title: Software Engineer (New Grad)
+  title_normalized: software engineer new grad
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 6f34bb042763725d
+  apply_url: https://jobright.ai/jobs/info/6a60dda611edf44d7915e3bc
+  canonical_url: https://jobright.ai/jobs/info/6a60dda611edf44d7915e3bc
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 30957
+  company_id: null
+  company_name: RTX
+  title: Software Engineer I - Test Solutions - Onsite
+  title_normalized: software engineer i test solutions onsite
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 0e55b45fcea3671c
+  apply_url: https://jobright.ai/jobs/info/6a874c91680f314a29d38156
+  canonical_url: https://jobright.ai/jobs/info/6a874c91680f314a29d38156
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-19T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31067
+  company_id: null
+  company_name: Amazon
+  title: Software Development Engineer - 2026 (US)
+  title_normalized: software development engineer 2026 us
+  primary_metro: seattle
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: a9862253ac7b9df1
+  apply_url: https://jobright.ai/jobs/info/6a5852203330ca6f993c3f98
+  canonical_url: https://jobright.ai/jobs/info/6a5852203330ca6f993c3f98
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-19T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31086
+  company_id: null
+  company_name: Northrop Grumman
+  title: Associate / Engineer Embedded Software
+  title_normalized: associate engineer embedded software
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: b89d6f1528a67b66
+  apply_url: https://jobright.ai/jobs/info/6a838aeb1081a745e97100f2
+  canonical_url: https://jobright.ai/jobs/info/6a838aeb1081a745e97100f2
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31117
+  company_id: null
+  company_name: Amazon
+  title: Software Development Engineer – Database 2026 (US)
+  title_normalized: software development engineer database 2026 us
+  primary_metro: seattle
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 9cc9cf0b862e52d4
+  apply_url: https://jobright.ai/jobs/info/6a3ae84e649fdf1629306529
+  canonical_url: https://jobright.ai/jobs/info/6a3ae84e649fdf1629306529
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31141
+  company_id: 19
+  company_name: State Street
+  title: Software Engineer, CRD- New Graduate
+  title_normalized: software engineer crd new graduate
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 91176364b14f9e6c
+  apply_url: https://jobright.ai/jobs/info/6a7b5ce0bc05d77f2bdde7e7
+  canonical_url: https://jobright.ai/jobs/info/6a7b5ce0bc05d77f2bdde7e7
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31143
+  company_id: null
+  company_name: Capgemini
+  title: Junior Salesforce Developer Job Details / Capgemini
+  title_normalized: junior salesforce developer job details capgemini
+  primary_metro: atlanta
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 4d9f0736fe34c541
+  apply_url: https://jobright.ai/jobs/info/6a84902ce459fa3baa85f399
+  canonical_url: https://jobright.ai/jobs/info/6a84902ce459fa3baa85f399
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31178
+  company_id: null
+  company_name: TikTok
+  title: Software Engineer Graduate (Recommendation Infrastructure) - 2027 Start
+  title_normalized: software engineer graduate recommendation infrastructure 2027 start
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: b889741910596ffd
+  apply_url: https://jobright.ai/jobs/info/6a7d66bf83621355407ae09e
+  canonical_url: https://jobright.ai/jobs/info/6a7d66bf83621355407ae09e
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31253
+  company_id: null
+  company_name: RTX
+  title: Software Engineer I - Aircraft Interiors (ONSITE)
+  title_normalized: software engineer i aircraft interiors onsite
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: 3bb92ea753545852
+  apply_url: https://jobright.ai/jobs/info/6a84a1a27b33d72276257290
+  canonical_url: https://jobright.ai/jobs/info/6a84a1a27b33d72276257290
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-17T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31369
+  company_id: null
+  company_name: Capgemini
+  title: Salesforce Developer Job Details / Capgemini
+  title_normalized: salesforce developer job details capgemini
+  primary_metro: atlanta
+  role_family: software_engineering
+  seniority: unknown
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: e8587bce392c1736
+  apply_url: https://jobright.ai/jobs/info/6a806202927c79391ad105af
+  canonical_url: https://jobright.ai/jobs/info/6a806202927c79391ad105af
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-15T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31420
+  company_id: 7
+  company_name: NVIDIA
+  title: Formal Verification Engineer - New College Grad 2026
+  title_normalized: formal verification engineer new college grad 2026
+  primary_metro: san_francisco
+  role_family: hardware
+  seniority: new_grad
+  source: third_party
+  source_provider: github
+  source_slug: jobright-ai/2026-Software-Engineer-New-Grad
+  source_job_id: befec9bd251e8d3c
+  apply_url: https://jobright.ai/jobs/info/69d55e28cdb525785fbd025e
+  canonical_url: https://jobright.ai/jobs/info/69d55e28cdb525785fbd025e
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-14T12:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31508
+  company_id: null
+  company_name: 3S Business Corporation
+  title: Java Training - Sales force - Cognos
+  title_normalized: java training sales force cognos
+  primary_metro: houston
+  role_family: other_nontech
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: af9b003f-eabf-4313-a486-425b39e293ca
+  apply_url: https://jobs.smartrecruiters.com/3SBusinessCorporationInc1/83254832
+  canonical_url: https://jobs.smartrecruiters.com/3SBusinessCorporationInc1/83254832
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-18T07:18:34Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31518
+  company_id: null
+  company_name: DellFor Technologies
+  title: Entry Level .Net Developer
+  title_normalized: entry level .net developer
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 2db155f2-6346-4a55-9a65-418f1dcce820
+  apply_url: https://jobs.smartrecruiters.com/DellforTechnologies/102105305
+  canonical_url: https://jobs.smartrecruiters.com/DellforTechnologies/102105305
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-20T15:20:20Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31524
+  company_id: null
+  company_name: DellFor Technologies
+  title: Entry-Level Java Developer
+  title_normalized: entry level java developer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: c9f89689-277d-4507-95e7-eb3646d0581e
+  apply_url: https://jobs.smartrecruiters.com/DellforTechnologies/102100676
+  canonical_url: https://jobs.smartrecruiters.com/DellforTechnologies/102100676
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-20T15:13:07Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31530
+  company_id: null
+  company_name: DellFor Technologies
+  title: Entry Level .Net Developer
+  title_normalized: entry level .net developer
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 7b32cd72-496a-4768-81e0-88f4990a12b3
+  apply_url: https://jobs.smartrecruiters.com/DellforTechnologies/102103064
+  canonical_url: https://jobs.smartrecruiters.com/DellforTechnologies/102103064
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-20T15:12:46Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31537
+  company_id: null
+  company_name: DellFor Technologies
+  title: Entry Level .Net Developer
+  title_normalized: entry level .net developer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 24653590-27f4-435f-9fb7-92e5dd9a6217
+  apply_url: https://jobs.smartrecruiters.com/DellforTechnologies/102100962
+  canonical_url: https://jobs.smartrecruiters.com/DellforTechnologies/102100962
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-20T15:12:46Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31570
+  company_id: null
+  company_name: Micron Technology
+  title: New College Grad - Memory Design Engineer - Hbm
+  title_normalized: new college grad memory design engineer hbm
+  primary_metro: dallas
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 441c3d0c-ee76-4f06-85bc-5c015f9c7452
+  apply_url: https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/New-College-Grad---Memory-Design-Engineer--HBM_JR93183-1
+  canonical_url: https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/New-College-Grad---Memory-Design-Engineer--HBM_JR93183-1
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-27T23:55:19Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31597
+  company_id: null
+  company_name: RTX
+  title: Software Engineer 2
+  title_normalized: software engineer 2
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: mid
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: e4839ecb-2777-4886-93d2-c56612b08784
+  apply_url: https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-801--1151-E-Hermans-Rd--BLDG-801-External-Site/XMLNAME-2026-Fulltime-Raytheon-Software-Engineer-II---Test-Equipment---Onsite_01790413
+  canonical_url: https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-AZ-TUCSON-801--1151-E-Hermans-Rd--BLDG-801-External-Site/XMLNAME-2026-Fulltime-Raytheon-Software-Engineer-II---Test-Equipment---Onsite_01790413
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-03-12T10:13:02Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31841
+  company_id: null
+  company_name: RTX
+  title: Software Engineer 1
+  title_normalized: software engineer 1
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 5cf15281-fec7-4bc8-83b4-3db03d031421
+  apply_url: https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-193--1120-Collins-Rd-NE--BLDG193/Software-Engineer-1--ONSITE-_01846079
+  canonical_url: https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-193--1120-Collins-Rd-NE--BLDG193/Software-Engineer-1--ONSITE-_01846079
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-05-19T22:09:20Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31881
+  company_id: null
+  company_name: General Dynamics Mission Systems
+  title: Entry Level Infrastructure Software Engineer
+  title_normalized: entry level infrastructure software engineer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 78ab6c83-7d91-460e-acf5-e924894eb1cc
+  apply_url: https://careers-gdms.icims.com/jobs/72580/job?mobile=true&needsRedirect=false
+  canonical_url: https://careers-gdms.icims.com/jobs/72580/job?mobile=true&needsRedirect=false
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-05-13T22:07:50Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31936
+  company_id: 7
+  company_name: NVIDIA
+  title: Cell Modeling and Verification Engineer New Grad
+  title_normalized: cell modeling and verification engineer new grad
+  primary_metro: san_francisco
+  role_family: hardware
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 28f533ee-77db-4862-babb-7897aa104c42
+  apply_url: https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Cell-Modelling-and-Verification-Engineer---New-College-Grad-2026_JR2011631
+  canonical_url: https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Cell-Modelling-and-Verification-Engineer---New-College-Grad-2026_JR2011631
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-03T06:08:27Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31946
+  company_id: null
+  company_name: General Dynamics Mission Systems
+  title: Entry Level Infrastructure Hardware Systems Engineer
+  title_normalized: entry level infrastructure hardware systems engineer
+  primary_metro: us_unknown
+  role_family: hardware
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 25bf1002-16f7-4d53-bcf5-e005d14cffa8
+  apply_url: https://careers-gdms.icims.com/jobs/72936/job?mobile=true&needsRedirect=false
+  canonical_url: https://careers-gdms.icims.com/jobs/72936/job?mobile=true&needsRedirect=false
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-04T14:23:26Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31950
+  company_id: null
+  company_name: ByteDance
+  title: Research Scientist Vision Foundation Model - Seed
+  title_normalized: research scientist vision foundation model seed
+  primary_metro: san_francisco
+  role_family: ml_ai
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 71013f85-b7ba-4168-86fc-18a8cf752165
+  apply_url: https://jobs.bytedance.com/en/position/7623540885834107189/detail
+  canonical_url: https://jobs.bytedance.com/en/position/7623540885834107189/detail
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-04T22:08:28Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31992
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: fdfb1c4f-1335-43f0-b822-51f89bc6d49f
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266660009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266660009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:57Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 31994
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: f7db582c-7a38-4f83-8074-0393bdba993b
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248725009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248725009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:58Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32003
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 3579b778-81af-4e4a-b052-0c828b8c4845
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248527009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248527009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:57Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32005
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: e8ba2371-914e-4265-b09e-1cca792069e3
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266665009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266665009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:57Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32007
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: d71136b8-4c71-4a40-9a37-7cb70f9afaee
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248773009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248773009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:56Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32016
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 18d486ba-7847-4071-af9b-c194a73c76ea
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248754009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248754009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:56Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32017
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 12609da5-d6ae-491f-8261-e877747de72f
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248760009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248760009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:56Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32019
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: d822056b-4f51-4414-b019-feaa401e5dc6
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266622009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266622009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:57Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32022
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 0b28c923-31e3-4ab8-95eb-f91ee34e3828
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248748009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248748009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:56Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32026
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: b9ba08a6-903a-46d4-9103-ba6528e580da
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248684009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248684009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:58Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32030
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 0e70152a-1276-4025-805a-c75e8bdda220
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248723009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248723009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:58Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32034
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: cbfaa67c-d916-46e0-8fa2-7b09c1622c2d
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266676009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266676009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:58Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32035
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: b0c1fce6-a504-4605-bd96-60c68d541ad2
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266678009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266678009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:58Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32036
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: a50a37d7-38a8-4a25-9de8-9744a0ac5f89
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248685009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4248685009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:58Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32041
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 0a4ddd3e-fd39-4c8e-b938-939631cad5df
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266667009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4266667009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-11T09:18:57Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32210
+  company_id: null
+  company_name: Susquehanna International Group (SIG)
+  title: Quantitative Systematic Trader
+  title_normalized: quantitative systematic trader
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 48008e25-fd18-4181-a61e-792a9c962548
+  apply_url: https://careers-sig.icims.com/jobs/11021/job?mobile=true&needsRedirect=false
+  canonical_url: https://careers-sig.icims.com/jobs/11021/job?mobile=true&needsRedirect=false
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-29T22:06:28Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32249
+  company_id: null
+  company_name: Palo Alto Networks
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: c58457ce-e22e-4633-bddb-0886f0537cc2
+  apply_url: https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Software-Engineer_JR-011524
+  canonical_url: https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Software-Engineer_JR-011524
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-01T22:10:20Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32266
+  company_id: 52
+  company_name: IMC Trading
+  title: Graduate Machine Learning Researcher
+  title_normalized: graduate machine learning researcher
+  primary_metro: chicago
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: c672badc-9657-46ee-bfdf-c31ec6e4308c
+  apply_url: https://job-boards.eu.greenhouse.io/imc/jobs/4907416101
+  canonical_url: https://job-boards.eu.greenhouse.io/imc/jobs/4907416101
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-01T22:28:40Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32298
+  company_id: null
+  company_name: Welo Global
+  title: Data Labeling Analyst - Speech & Voice AI Analyst - Finnish Speakers
+  title_normalized: data labeling analyst speech and voice ai analyst finnish speakers
+  primary_metro: new_york
+  role_family: other_nontech
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 8a199879-ac83-4e03-9133-ae6136c3e5c4
+  apply_url: https://jobs.lever.co/weloglobal/e7f8d054-a739-4a19-a049-39fbd0603988/apply
+  canonical_url: https://jobs.lever.co/weloglobal/e7f8d054-a739-4a19-a049-39fbd0603988/apply
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-04T22:07:03Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32304
+  company_id: null
+  company_name: Welo Global
+  title: Data Labeling Analyst - Speech & Voice AI Analyst - Greek Speakers
+  title_normalized: data labeling analyst speech and voice ai analyst greek speakers
+  primary_metro: new_york
+  role_family: other_nontech
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 619ca1f2-89e4-482c-a3eb-fa81ee86d139
+  apply_url: https://jobs.lever.co/weloglobal/4ba18e57-c8b7-4783-916b-358c4fe59985/apply
+  canonical_url: https://jobs.lever.co/weloglobal/4ba18e57-c8b7-4783-916b-358c4fe59985/apply
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-04T22:07:04Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32371
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 145cba92-b894-4834-b67b-334347a2ba4f
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307423009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307423009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-08T14:25:34Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32372
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: c7f2b025-9cd7-46ef-82d2-99e8977a1a9b
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307417009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307417009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-08T14:25:35Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32374
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 6e21dc35-2a15-4c16-bfcf-e44dbcca1871
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307427009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307427009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-08T14:25:33Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32375
+  company_id: null
+  company_name: Innodata
+  title: Generative AI Associate
+  title_normalized: generative ai associate
+  primary_metro: us_unknown
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 69efd413-5f40-4e3c-8c63-18f7c8da24ca
+  apply_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307424009
+  canonical_url: https://job-boards.greenhouse.io/innodatainc/jobs/4307424009
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-08T14:25:33Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32399
+  company_id: 2
+  company_name: JPMorgan Chase
+  title: Quantitative Trading & Research - RMBS Underwriting - Analyst
+  title_normalized: quantitative trading and research rmbs underwriting analyst
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 43ab9503-9377-4297-a179-a85a7169d278
+  apply_url: https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768112
+  canonical_url: https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210768112
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-09T14:06:45Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32454
+  company_id: null
+  company_name: Micron Technology
+  title: New College Grad - Design Engineer - Hbm
+  title_normalized: new college grad design engineer hbm
+  primary_metro: dallas
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: f8191bb6-b5ba-4864-9c7c-ca435b225435
+  apply_url: https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/New-College-Grad---Design-Engineer--HBM_JR106212
+  canonical_url: https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/New-College-Grad---Design-Engineer--HBM_JR106212
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-13T00:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32526
+  company_id: null
+  company_name: Susquehanna International Group (SIG)
+  title: Quantitative Systematic Trader
+  title_normalized: quantitative systematic trader
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 6470fc04-154d-4d53-9a4c-9f69aaba3aaf
+  apply_url: https://careers-sig.icims.com/jobs/11022/job?mobile=true&needsRedirect=false
+  canonical_url: https://careers-sig.icims.com/jobs/11022/job?mobile=true&needsRedirect=false
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-29T22:06:28Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32550
+  company_id: null
+  company_name: AHEAD
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: remote
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 009fad51-be8a-4c3c-b691-368556bf5c5d
+  apply_url: https://jobs.lever.co/thinkahead/b044c4f0-4509-425f-8581-58070ded2379/apply
+  canonical_url: https://jobs.lever.co/thinkahead/b044c4f0-4509-425f-8581-58070ded2379/apply
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-17T22:10:38Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32635
+  company_id: null
+  company_name: Argonne National Laboratory
+  title: Postdoctoral Appointee - Convective Storms and Severe Weather
+  title_normalized: postdoctoral appointee convective storms and severe weather
+  primary_metro: us_unknown
+  role_family: unknown
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 6cb13044-28d6-4291-9684-4c9f64739102
+  apply_url: https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/job/Lemont-IL-USA/Postdoctoral-Appointee---Convective-Storms-and-Severe-Weather_422701
+  canonical_url: https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/job/Lemont-IL-USA/Postdoctoral-Appointee---Convective-Storms-and-Severe-Weather_422701
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-13T14:27:41Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32662
+  company_id: null
+  company_name: Palo Alto Networks
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: f73fef07-4935-451c-b921-b37714844677
+  apply_url: https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Software-Engineer_JR-011532
+  canonical_url: https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---USA---CA---Headquarters/Software-Engineer_JR-011532
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-04T10:19:41Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32728
+  company_id: null
+  company_name: Traba
+  title: Software Engineer New Grad
+  title_normalized: software engineer new grad
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 9904ce81-b80f-448d-a958-9b719a4676e9
+  apply_url: https://jobs.ashbyhq.com/traba/90d6307c-1bb1-4abf-8e73-7afa6a7e0a70/application?embed=true
+  canonical_url: https://jobs.ashbyhq.com/traba/90d6307c-1bb1-4abf-8e73-7afa6a7e0a70/application?embed=true
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-22T22:14:51Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32918
+  company_id: null
+  company_name: Trillium
+  title: Equity Trader
+  title_normalized: equity trader
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 937bbf47-9af5-4ffd-9dee-85751c288cad
+  apply_url: https://www.trlm.com/apply/5191098007?gh_jid=5191098007
+  canonical_url: https://www.trlm.com/apply/5191098007?gh_jid=5191098007
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-30T22:25:13Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32919
+  company_id: null
+  company_name: Trillium
+  title: Equity Trader
+  title_normalized: equity trader
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 1518339f-2ab8-4eb1-a263-aced593848e5
+  apply_url: https://www.trlm.com/apply/5191106007?gh_jid=5191106007
+  canonical_url: https://www.trlm.com/apply/5191106007?gh_jid=5191106007
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-30T22:25:13Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 32927
+  company_id: null
+  company_name: Artera
+  title: Associate AI Builder
+  title_normalized: associate ai builder
+  primary_metro: seattle
+  role_family: other_nontech
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 143e4b9d-cab8-44f1-88c8-57faf543844f
+  apply_url: https://jobs.lever.co/artera-2/eae88c70-fbf5-4525-890c-d3f9377418b0/apply
+  canonical_url: https://jobs.lever.co/artera-2/eae88c70-fbf5-4525-890c-d3f9377418b0/apply
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-31T06:04:45Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33154
+  company_id: null
+  company_name: TikTok
+  title: Machine Learning Engineer New Grad - E-Commerce Search
+  title_normalized: machine learning engineer new grad e commerce search
+  primary_metro: seattle
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 5352619a-3d75-4bd9-b7af-098751f77cad
+  apply_url: https://lifeattiktok.com/search/7668390999147776309
+  canonical_url: https://lifeattiktok.com/search/7668390999147776309
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-03T06:15:01Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33210
+  company_id: 24
+  company_name: Freddie Mac
+  title: Single Family Data Analyst
+  title_normalized: single family data analyst
+  primary_metro: washington_dc
+  role_family: data_science
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 615e673e-d151-4378-ac1e-15cefa2b366d
+  apply_url: https://freddiemac.wd5.myworkdayjobs.com/External/job/McLean-VA/Single-Family-Data-Analyst_JR17440
+  canonical_url: https://freddiemac.wd5.myworkdayjobs.com/External/job/McLean-VA/Single-Family-Data-Analyst_JR17440
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-03T00:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33422
+  company_id: null
+  company_name: Northrop Grumman
+  title: Associate Software Engineer / Software Engineer - Software Engineering
+  title_normalized: associate software engineer software engineer software engineering
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: b5c1fef0-1b4d-45d7-aebe-2baa0c94063b
+  apply_url: https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Florida-Melbourne/XMLNAME-2027-Associate-Software-Engineer---Software-Engineer_R10243561
+  canonical_url: https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Florida-Melbourne/XMLNAME-2027-Associate-Software-Engineer---Software-Engineer_R10243561
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-05T00:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33431
+  company_id: null
+  company_name: TikTok
+  title: Machine Learning Engineer Graduate - E-Commerce Recommendation/Search Alliance
+  title_normalized: machine learning engineer graduate e commerce recommendation search alliance
+  primary_metro: san_francisco
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: ef652a5e-7a67-4ca7-befb-a5d65d0df79d
+  apply_url: https://lifeattiktok.com/search/7669908897587824949
+  canonical_url: https://lifeattiktok.com/search/7669908897587824949
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-06T01:54:55Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33432
+  company_id: null
+  company_name: TikTok
+  title: Machine Learning Engineer Graduate - E-Commerce Recommendation/Search Alliance
+  title_normalized: machine learning engineer graduate e commerce recommendation search alliance
+  primary_metro: seattle
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: d4f9343e-d33a-4784-9ce5-bd26b3b3bd28
+  apply_url: https://lifeattiktok.com/search/7669910326745434421
+  canonical_url: https://lifeattiktok.com/search/7669910326745434421
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-06T01:54:51Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33435
+  company_id: null
+  company_name: TikTok
+  title: Machine Learning Engineer Graduate - E-Commerce Recommendation/Search Alliance
+  title_normalized: machine learning engineer graduate e commerce recommendation search alliance
+  primary_metro: seattle
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 81c1dd03-9747-4d9a-9a78-f0cc2bfea6fc
+  apply_url: https://lifeattiktok.com/search/7669909088788138245
+  canonical_url: https://lifeattiktok.com/search/7669909088788138245
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-06T01:54:52Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33438
+  company_id: null
+  company_name: TikTok
+  title: Machine Learning Engineer Graduate - E-Commerce Recommendation/Search Alliance
+  title_normalized: machine learning engineer graduate e commerce recommendation search alliance
+  primary_metro: san_francisco
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 0d2513a2-ea9b-4155-abcf-6cdc50cdb325
+  apply_url: https://lifeattiktok.com/search/7669913085331409205
+  canonical_url: https://lifeattiktok.com/search/7669913085331409205
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-06T01:54:54Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33775
+  company_id: null
+  company_name: 9to9 Software Solutions
+  title: Entry Level Java Developer
+  title_normalized: entry level java developer
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 63848af9-c211-4b79-b264-401610b828f6
+  apply_url: https://jobs.smartrecruiters.com/9to9SoftwareSolutionsLLC/743999674047363
+  canonical_url: https://jobs.smartrecruiters.com/9to9SoftwareSolutionsLLC/743999674047363
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-12T01:17:10Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33931
+  company_id: null
+  company_name: TikTok
+  title: Software Engineer Graduate - Recommendation Infrastructure
+  title_normalized: software engineer graduate recommendation infrastructure
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 823dc91a-f895-469a-b516-b3be2e1894e7
+  apply_url: https://lifeattiktok.com/search/7673284715407886597
+  canonical_url: https://lifeattiktok.com/search/7673284715407886597
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-13T09:10:20Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33940
+  company_id: null
+  company_name: ByteDance
+  title: Research Scientist Graduate - Seed Vision Foundation Model
+  title_normalized: research scientist graduate seed vision foundation model
+  primary_metro: san_francisco
+  role_family: ml_ai
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: fe92a675-1a53-4b88-a3e3-7e810871610d
+  apply_url: https://jobs.bytedance.com/en/position/7623543228228536581/detail
+  canonical_url: https://jobs.bytedance.com/en/position/7623543228228536581/detail
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-04T22:08:28Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 33999
+  company_id: null
+  company_name: V2X
+  title: Electronics Worker 1 - 2nd Shift
+  title_normalized: electronics worker 1 2nd shift
+  primary_metro: indianapolis
+  role_family: unknown
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 5763867a-2e36-4d9b-af5f-3a2829075f98
+  apply_url: https://careers.gov2x.com/jobs/61950?icims=1
+  canonical_url: https://careers.gov2x.com/jobs/61950?icims=1
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-14T04:04:31Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34003
+  company_id: null
+  company_name: V2X
+  title: Electronics Worker 1 - 2nd shift
+  title_normalized: electronics worker 1 2nd shift
+  primary_metro: indianapolis
+  role_family: unknown
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 4119614b-b9ac-4fda-ad91-32acf3ddbb81
+  apply_url: https://careers.gov2x.com/jobs/61951?icims=1
+  canonical_url: https://careers.gov2x.com/jobs/61951?icims=1
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-14T04:04:25Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34101
+  company_id: null
+  company_name: SpaceX
+  title: Software Engineer New Grad - Software - Starlink
+  title_normalized: software engineer new grad software starlink
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 1436f890-5733-4b9e-ad61-4df307e22f43
+  apply_url: https://boards.greenhouse.io/spacex/jobs/8696097002
+  canonical_url: https://boards.greenhouse.io/spacex/jobs/8696097002
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-14T22:18:18Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34295
+  company_id: null
+  company_name: CROSSMARK
+  title: Data Collector
+  title_normalized: data collector
+  primary_metro: us_unknown
+  role_family: unknown
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: fa77fbd2-2a59-472a-906e-22028f34469a
+  apply_url: https://jobs.smartrecruiters.com/CROSSMARK1/113713866
+  canonical_url: https://jobs.smartrecruiters.com/CROSSMARK1/113713866
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T01:29:41Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34296
+  company_id: null
+  company_name: CROSSMARK
+  title: Data Collector
+  title_normalized: data collector
+  primary_metro: us_unknown
+  role_family: unknown
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 2d8cdf9d-b9eb-4ced-ac4c-3a895bc5ec3e
+  apply_url: https://jobs.smartrecruiters.com/CROSSMARK1/113714633
+  canonical_url: https://jobs.smartrecruiters.com/CROSSMARK1/113714633
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-18T01:29:40Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34346
+  company_id: null
+  company_name: Trillium
+  title: Equity Trader
+  title_normalized: equity trader
+  primary_metro: new_york
+  role_family: quant
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: a00101f6-5c51-4a7d-a424-e3f3a7ac8a16
+  apply_url: https://www.trlm.com/apply/5191110007?gh_jid=5191110007
+  canonical_url: https://www.trlm.com/apply/5191110007?gh_jid=5191110007
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-30T22:25:12Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34583
+  company_id: 7
+  company_name: NVIDIA
+  title: System Software Engineer, Distributed...
+  title_normalized: system software engineer distributed...
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: 6658ae3bd66ae943
+  apply_url: https://nvidia.wd5.myworkdayjobs.com/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Distributed-Systems_JR2013472
+  canonical_url: https://nvidia.wd5.myworkdayjobs.com/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Distributed-Systems_JR2013472
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:58:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34774
+  company_id: null
+  company_name: Booz Allen Hamilton
+  title: Information Security Risk Specialist
+  title_normalized: information security risk specialist
+  primary_metro: us_unknown
+  role_family: security
+  seniority: senior
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: 851e31ebcafa2434
+  apply_url: https://bah.wd1.myworkdayjobs.com/bah_jobs/job/St-Inigoes-MD/Information-Security-Risk-Specialist_R0247517
+  canonical_url: https://bah.wd1.myworkdayjobs.com/bah_jobs/job/St-Inigoes-MD/Information-Security-Risk-Specialist_R0247517
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:59:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34820
+  company_id: null
+  company_name: Harvey
+  title: Detection & Response Security Engineer
+  title_normalized: detection and response security engineer
+  primary_metro: new_york
+  role_family: security
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: 93a5d07be9caff22
+  apply_url: https://jobs.ashbyhq.com/harvey/a69d1923-89dc-499c-ad87-5597ea1b9b10
+  canonical_url: https://jobs.ashbyhq.com/harvey/a69d1923-89dc-499c-ad87-5597ea1b9b10
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:57:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34834
+  company_id: null
+  company_name: Applied Intuition
+  title: Enterprise Security Engineer
+  title_normalized: enterprise security engineer
+  primary_metro: san_francisco
+  role_family: security
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: ad4d56c3e91fd2ee
+  apply_url: https://jobs.ashbyhq.com/applied/e26974e6-a0aa-4143-90c1-22396bcc38dd
+  canonical_url: https://jobs.ashbyhq.com/applied/e26974e6-a0aa-4143-90c1-22396bcc38dd
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:57:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 34836
+  company_id: null
+  company_name: Applied Intuition
+  title: Embedded Security Engineer
+  title_normalized: embedded security engineer
+  primary_metro: san_francisco
+  role_family: security
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: 44dd163372240b68
+  apply_url: https://jobs.ashbyhq.com/applied/1909abc7-df4f-4220-adaf-0549bd01f657
+  canonical_url: https://jobs.ashbyhq.com/applied/1909abc7-df4f-4220-adaf-0549bd01f657
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:57:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 35030
+  company_id: null
+  company_name: Verizon
+  title: Retail Sales Associate
+  title_normalized: retail sales associate
+  primary_metro: null
+  role_family: other_nontech
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: 14afb2a851e38034
+  apply_url: https://verizon.wd12.myworkdayjobs.com/verizon-careers/job/1805-S-Loop-288-Denton-Texas/Retail-Sales-Associate_R-1099907
+  canonical_url: https://verizon.wd12.myworkdayjobs.com/verizon-careers/job/1805-S-Loop-288-Denton-Texas/Retail-Sales-Associate_R-1099907
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:58:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 35031
+  company_id: null
+  company_name: Verizon
+  title: Retail Sales Associate
+  title_normalized: retail sales associate
+  primary_metro: null
+  role_family: other_nontech
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Jobs-2027
+  source_job_id: 3fc7f910bd3eed44
+  apply_url: https://verizon.wd12.myworkdayjobs.com/verizon-careers/job/8612-SE-Sunnyside-Rd-Clackamas-Oregon/Retail-Sales-Associate_R-1099906-1
+  canonical_url: https://verizon.wd12.myworkdayjobs.com/verizon-careers/job/8612-SE-Sunnyside-Rd-Clackamas-Oregon/Retail-Sales-Associate_R-1099906-1
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:58:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 35182
+  company_id: 7
+  company_name: NVIDIA
+  title: System Software Engineer, Distributed...
+  title_normalized: system software engineer distributed...
+  primary_metro: san_francisco
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Software-Engineering-Jobs-2027
+  source_job_id: 6658ae3bd66ae943
+  apply_url: https://nvidia.wd5.myworkdayjobs.com/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Distributed-Systems_JR2013472
+  canonical_url: https://nvidia.wd5.myworkdayjobs.com/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Distributed-Systems_JR2013472
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:58:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 35374
+  company_id: null
+  company_name: Booz Allen Hamilton
+  title: Information Security Risk Specialist
+  title_normalized: information security risk specialist
+  primary_metro: us_unknown
+  role_family: security
+  seniority: senior
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Software-Engineering-Jobs-2027
+  source_job_id: 851e31ebcafa2434
+  apply_url: https://bah.wd1.myworkdayjobs.com/bah_jobs/job/St-Inigoes-MD/Information-Security-Risk-Specialist_R0247517
+  canonical_url: https://bah.wd1.myworkdayjobs.com/bah_jobs/job/St-Inigoes-MD/Information-Security-Risk-Specialist_R0247517
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:59:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 35438
+  company_id: null
+  company_name: OpenAI
+  title: Field Security Specialist (Cyber Secu...
+  title_normalized: field security specialist cyber secu...
+  primary_metro: san_francisco
+  role_family: security
+  seniority: senior
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Software-Engineering-Jobs-2027
+  source_job_id: 88da2fdc0a337e04
+  apply_url: https://jobs.ashbyhq.com/openai/c9135e66-e49e-4bdc-be89-5d45aad23865
+  canonical_url: https://jobs.ashbyhq.com/openai/c9135e66-e49e-4bdc-be89-5d45aad23865
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:57:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 35582
+  company_id: null
+  company_name: Palantir
+  title: Technical Program Manager - Security
+  title_normalized: technical program manager security
+  primary_metro: washington_dc
+  role_family: product
+  seniority: manager
+  source: aggregator
+  source_provider: github
+  source_slug: zapplyjobs/New-Grad-Software-Engineering-Jobs-2027
+  source_job_id: 2f6e562284abd389
+  apply_url: https://jobs.lever.co/palantir/b908b3e4-81f9-47b3-9088-ee8dd3932003
+  canonical_url: https://jobs.lever.co/palantir/b908b3e4-81f9-47b3-9088-ee8dd3932003
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-20T20:58:40Z'
+  first_seen_at: '2026-08-20T21:07:34Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 36468
+  company_id: 62
+  company_name: OpenAI
+  title: Field Security Specialist (Cyber Security Solutions Engineer)
+  title_normalized: field security specialist cyber security solutions engineer
+  primary_metro: san_francisco
+  role_family: security
+  seniority: senior
+  source: company_direct
+  source_provider: ashby
+  source_slug: openai
+  source_job_id: c9135e66-e49e-4bdc-be89-5d45aad23865
+  apply_url: https://jobs.ashbyhq.com/openai/c9135e66-e49e-4bdc-be89-5d45aad23865
+  canonical_url: https://jobs.ashbyhq.com/openai/c9135e66-e49e-4bdc-be89-5d45aad23865
+  description_md: '**About the Team**
+
+
+    The Solutions Engineering team is made up of trusted technical advisors who help organizations adopt OpenAI’s technology safely, effectively, and responsibly. We partner closely with customers, Sales,
+    Product, Engineering, and Security to translate frontier AI capabilities into practical workflows that create real-world impact.
+
+
+    Cybersecurity is one of the most urgent areas where AI can help. As frontier models become more capable at reasoning over code, logs, infrastructure, and security evidence, organizations need guidance
+    on how to evaluate, validate, and deploy these systems safely. Our goal is to help customers move from identifying risks to implementing solutions.
+
+
+    **About the Role**
+
+
+    We are committed to bringing together people from diverse backgrounds and perspectives who are excited to help build and deploy safe, useful AI. We are seeking a solutions engineer to partner with our
+    Enterprise customers and ensure they achieve tangible business value from our models through the OpenAI suite of products. You will partner with senior business stakeholders to understand their pre-sales
+    needs, guide their AI strategy, and identify the highest value use cases and applications. You will work with business and technical teams to demonstrate the value of our solutions and recommend architectural
+    patterns to kickstart their implementation and development. You will work closely with Enterprise Sales, Security, and Product teams.
+
+
+    We are looking for a Field Sec'
+  base_posted_min: 335000.0
+  base_posted_max: 352000.0
+  posted_at: '2026-06-16T14:21:30Z'
+  first_seen_at: '2026-08-20T21:19:23Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 38492
+  company_id: 92
+  company_name: Palantir
+  title: Technical Program Manager - Security
+  title_normalized: technical program manager security
+  primary_metro: washington_dc
+  role_family: product
+  seniority: manager
+  source: company_direct
+  source_provider: lever
+  source_slug: palantir
+  source_job_id: b908b3e4-81f9-47b3-9088-ee8dd3932003
+  apply_url: https://jobs.lever.co/palantir/b908b3e4-81f9-47b3-9088-ee8dd3932003
+  canonical_url: https://jobs.lever.co/palantir/b908b3e4-81f9-47b3-9088-ee8dd3932003
+  description_md: "### The Role\n\nAs a Technical Program Manager, Security, you are the engine behind Palantir's security engineering teams. Palantir's software is trusted by some of the most critical\
+    \ institutions in the world, and protecting that trust requires a security organization that moves fast, stays ahead of threats, and never loses sight of quality.   \n  \nYou partner with security engineers\
+    \ to drive our security programs forward, ensuring we are building and shipping secure, resilient products every day. You track and stabilize projects, remove roadblocks, and anticipate stakeholder\
+    \ needs to free up our engineers to focus their time and attention on the security problems they are best equipped to solve.\n\n### Core Responsibilities\n\n- Partner with Palantir security engineers,\
+    \ infrastructure teams, product managers, and legal to drive key security deliverables through the entire software development and security lifecycle.\n- Synthesize concrete security goals from product\
+    \ and threat landscape vision, mapping global security strategy to granular team tasks and issues. This means triaging requests from the field to create maximum focus for the team, while escalating\
+    \ items that need immediate attention.\n- Keep broad and complete state of everything involving or related to your projects, including vulnerability remediation timelines, incident response obligations,\
+    \ and detection coverage gaps. Pre-empt and resolve any issues that may steer projects off-course.\n- Enhance cross-team collaboratio"
+  base_posted_min: 93000.0
+  base_posted_max: 160000.0
+  posted_at: '2026-07-20T15:01:24Z'
+  first_seen_at: '2026-08-20T21:20:19Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 38722
+  company_id: 123
+  company_name: Harvey
+  title: Detection & Response Security Engineer
+  title_normalized: detection and response security engineer
+  primary_metro: new_york
+  role_family: security
+  seniority: unknown
+  source: company_direct
+  source_provider: ashby
+  source_slug: harvey
+  source_job_id: a69d1923-89dc-499c-ad87-5597ea1b9b10
+  apply_url: https://jobs.ashbyhq.com/harvey/a69d1923-89dc-499c-ad87-5597ea1b9b10
+  canonical_url: https://jobs.ashbyhq.com/harvey/a69d1923-89dc-499c-ad87-5597ea1b9b10
+  description_md: '# **Why Harvey**
+
+
+    At Harvey, we’re transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade platform, and deep domain expertise, we’re reshaping how critical knowledge
+    work gets done for decades to come.
+
+
+    This is a rare chance to help build a generational company at a true inflection point. We have strong product-market fit and world-class investor support. We’re scaling fast and defining a new category
+    in real time. The work is ambitious, the bar is high, and the opportunity for growth — personal, professional, and financial — is unmatched.
+
+
+    Our team moves fast, takes ownership, and is deeply committed to the mission — operating with intensity, staying close to our customers, and pushing each other for excellence. We live by three values:
+    Decisiveness, Simplicity, and Job''s Not Finished. We act quickly on clear judgment over perfect information, we believe simplicity is what scales, and we''re never satisfied with where we are. If you
+    want to do the best work of your career alongside people who share that drive, we''d love to build with you.
+
+
+    At Harvey, the future of professional services is being written today — and we’re just getting started.
+
+
+    # **Role Overview**
+
+
+    Some of the world''s largest companies and their law firms use Harvey’s AI capabilities to deliver world-class client services at unprecedented scale and efficiency. Harvey allows high-performing professionals
+    to gain deep domain knowledge faster, understand the'
+  base_posted_min: 188000.0
+  base_posted_max: 282000.0
+  posted_at: '2026-07-09T18:25:55Z'
+  first_seen_at: '2026-08-20T21:20:22Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 43771
+  company_id: 452
+  company_name: AHEAD
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: unknown
+  source: company_direct
+  source_provider: lever
+  source_slug: thinkahead
+  source_job_id: b044c4f0-4509-425f-8581-58070ded2379
+  apply_url: https://jobs.lever.co/thinkahead/b044c4f0-4509-425f-8581-58070ded2379
+  canonical_url: https://jobs.lever.co/thinkahead/b044c4f0-4509-425f-8581-58070ded2379
+  description_md: 'AHEAD is on the hunt for a sharp, motivated Software Engineer, early in their career and ready to do real work from day one, to help build Hatch. We’re a leading IT services provider,
+    trusted by some of the world’s largest companies to design, build, run, and modernize their most important technology across cloud, data, AI, and security.
+
+
+    Hatch is an advanced platform for IT lifecycle management, renewal, procurement, and logistics, giving enterprises real-time visibility and control over their IT assets, orders, contracts, and inventory
+    across thousands of sites. Unity, its sibling platform, extends those capabilities to streamline our own operations and service delivery. You’ll join a progressive engineering team that lives on the
+    forefront of technology. We build real products, adopt new tools early, sweat the details, and trade ideas constantly. This is a place to be noticed for your work and your talent, not your years of
+    experience, and to learn an enormous amount, fast.
+
+
+    We care more about how you think and how quickly you learn than about the languages on your résumé. You’ll start by contributing to real features and grow toward owning them end to end, writing, testing,
+    and shipping full-stack code with support from experienced engineers. Our stack today is Elixir and Phoenix. No prior experience with them is required. We care that you bring solid fundamentals and
+    the drive to pick up whatever a problem demands.
+
+
+    ### Building in the Age of AI
+
+
+    AI has changed what grea'
+  base_posted_min: 100000.0
+  base_posted_max: 130000.0
+  posted_at: '2026-07-17T18:55:16Z'
+  first_seen_at: '2026-08-20T21:21:20Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 43799
+  company_id: 319
+  company_name: 3S Business Corporation
+  title: Job Oriented In-Class training on Java, Sales force, Cognos, Tableau
+  title_normalized: job oriented in class training on java sales force cognos tableau
+  primary_metro: houston
+  role_family: other_nontech
+  seniority: unknown
+  source: company_direct
+  source_provider: smartrecruiters
+  source_slug: 3SBusinessCorporationInc1
+  source_job_id: '83254832'
+  apply_url: https://jobs.smartrecruiters.com/3SBusinessCorporationInc1/83254832
+  canonical_url: https://jobs.smartrecruiters.com/3SBusinessCorporationInc1/83254832
+  description_md: null
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2015-06-01T18:00:35Z'
+  first_seen_at: '2026-08-20T21:21:21Z'
+  delisted_at: null
+  description_fetched: 0
+- id: 43849
+  company_id: 226
+  company_name: 9to9 Software Solutions
+  title: Entry Level Java Developer
+  title_normalized: entry level java developer
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: company_direct
+  source_provider: smartrecruiters
+  source_slug: 9to9SoftwareSolutionsLLC
+  source_job_id: '743999674047363'
+  apply_url: https://jobs.smartrecruiters.com/9to9SoftwareSolutionsLLC/743999674047363-entry-level-java-developer
+  canonical_url: https://jobs.smartrecruiters.com/9to9SoftwareSolutionsLLC/743999674047363-entry-level-java-developer
+  description_md: "### Job Description\n\nResponsibilities:  \n  \nUnder general direction, designs, develops, troubleshoots, debugs, and implements software code using Java, JavaScript, HTML, SQL, and\
+    \ XML for software components of the web applications.   \nWorks with graphic designers and other members of a project team to develop the site concept, interface design, and architecture of the website.\
+    \ Responsible for interface implementation.   \nIntegrates web applications with backend databases. Deploys large web-based transaction systems using application servers. Researches, tests, builds,\
+    \ and coordinates the integration of new products per production and client requirements.   \nRequires strong navigation and site-design instincts.   \n  \nMinimum Qualifications:  \n  \nA Bachelor's\
+    \ or Associate’s degree in Computer Science or related field.   \nCreative problem-solving abilities and strong work ethic with “can do” attitude.   \nAbility to take high-level requirements and compile\
+    \ them into development tasks.  \nAbility to thrive in a team/collaborative environment.  \nAbility to function at a fast pace with multiple deadlines.  \nPossess a SECRET clearance or have the ability\
+    \ to obtain one. Must have at least an interim SECRET to begin work on the contract.  \nMust be CompTIA Security+ certified.  \nMust obtain as a related certification relevant to the computing environment,\
+    \ such as Oracle Certified Associate, with the first 90 days of employment.  \nMust be enrolled in CompTIA Continuing Education program. "
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2018-07-24T19:18:48Z'
+  first_seen_at: '2026-08-20T21:21:22Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 56609
+  company_id: 184
+  company_name: Argonne National Laboratory
+  title: Postdoctoral Appointee - Convective Storms and Severe Weather
+  title_normalized: postdoctoral appointee convective storms and severe weather
+  primary_metro: us_unknown
+  role_family: unknown
+  seniority: unknown
+  source: company_direct
+  source_provider: workday
+  source_slug: argonne/wd1/Argonne_Careers
+  source_job_id: '422701'
+  apply_url: https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/job/Lemont-IL-USA/Postdoctoral-Appointee---Convective-Storms-and-Severe-Weather_422701
+  canonical_url: https://argonne.wd1.myworkdayjobs.com/en-US/Argonne_Careers/job/Lemont-IL-USA/Postdoctoral-Appointee---Convective-Storms-and-Severe-Weather_422701
+  description_md: 'The Environmental Science Division at Argonne National Laboratory seeks a highly motivated postdoctoral researcher to advance the understanding and prediction of severe weather using
+    both physics-based and AI/ML approaches. This position focuses on high-resolution Earth system modeling and the analysis of convective storms and weather and hydrological hazards to improve predictability,
+    particularly at subseasonal and seasonal lead times. The successful candidate will lead simulations of convective systems using high-resolution regional and global models, evaluate model performance,
+    and develop innovative approaches to enhance predictive skill. The role also involves integrating AI/ML techniques to advance physical parameterizations and improve severe weather prediction skills.
+
+
+    Key responsibilities include:
+
+
+    * Conducting high-resolution model simulations of convective storms
+
+    * Contributing to model development using AI/ML approaches in areas such as clouds, turbulence, land–atmosphere interactions, and aerosol–cloud interactions
+
+    * Analyzing model outputs alongside observational datasets to advance physical understanding
+
+    * Publishing research findings in peer-reviewed journals and presenting results at scientific meetings
+
+    * Collaborating closely with scientists in the broad Earth system Science community and with industry partners
+
+
+    **Position Requirements**
+
+
+    **Required Qualifications:**
+
+
+    * Ph.D. (typically completed within the past 0–5 years) in Atmospheric Science or a relate'
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-17T00:00:00Z'
+  first_seen_at: '2026-08-20T21:29:02Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 57234
+  company_id: 311
+  company_name: Artera
+  title: Associate AI Builder
+  title_normalized: associate ai builder
+  primary_metro: seattle
+  role_family: other_nontech
+  seniority: new_grad
+  source: company_direct
+  source_provider: lever
+  source_slug: artera-2
+  source_job_id: eae88c70-fbf5-4525-890c-d3f9377418b0
+  apply_url: https://jobs.lever.co/artera-2/eae88c70-fbf5-4525-890c-d3f9377418b0
+  canonical_url: https://jobs.lever.co/artera-2/eae88c70-fbf5-4525-890c-d3f9377418b0
+  description_md: '**ABOUT THE OPPORTUNITY**
+
+
+    Artera is hiring an **Associate** **AI Builder** to build the agentic systems that deliver exceptional patient experiences for our customers — scheduling, referral coordination, medication refills,
+    billing, payment estimation and more.
+
+
+    You''ll be a contributing builder inside a customer-facing squad bringing AI-native fluency in delivering end-to-end on your customers’ needs — owning initiatives from customer discovery through production
+    operation, onboarding new customers onto what you build, and shipping enhancements that keep pace with the technical possibilities  for a named subset of our provider customers. Your creativity should
+    be boundless, your desire to deliver world class solutions unmatched, and your initiative and accountability to those outcomes as a new bar for our customers they themselves aspire to.
+
+
+    At this level, you''ll support/own customer outcomes independently with supervision, bringing the curiosity of a product manager, the discipline of a project manager, and the agentic fluency of an engineer
+    to your work. You''ll develop real subject-matter expertise and long term relationships with senior healthcare executives, and internally teach and support newer builders and experiment and advocate
+    for novel agentic techniques that make every Artera customer even more successful.
+
+
+    ### Responsibilities
+
+
+    - **Ownership:** Own end-to-end delivery and realized outcomes for named customers. Represent Artera credibly in customer conversations'
+  base_posted_min: 80000.0
+  base_posted_max: 140000.0
+  posted_at: '2026-07-31T00:16:53Z'
+  first_seen_at: '2026-08-20T21:29:09Z'
+  delisted_at: null
+  description_fetched: 1
+- id: 34439
+  company_id: 1034
+  company_name: Seeq
+  title: AI Customer Insights Engineer
+  title_normalized: ai customer insights engineer
+  primary_metro: remote
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 048a4ff3-3e1e-4263-befe-a0355b1afce4
+  apply_url: https://apply.workable.com/seeq/j/6F40FF632B/apply
+  canonical_url: https://apply.workable.com/seeq/j/6F40FF632B/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-19T02:02:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 298332
+  company_id: 1034
+  company_name: Seeq
+  title: AI Customer Insights Engineer
+  title_normalized: ai customer insights engineer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: unknown
+  source: company_direct
+  source_provider: workable
+  source_slug: seeq
+  source_job_id: 6F40FF632B
+  apply_url: https://apply.workable.com/j/6F40FF632B
+  canonical_url: https://apply.workable.com/j/6F40FF632B
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-19T00:00:00Z'
+  first_seen_at: '2026-08-21T00:26:27Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: 'The AI Customer Insights Engineer builds scalable intelligence workflows that help Seeq’s Customer Success organization act earlier, smarter, and more strategically.
+
+
+    This role sits within Customer Success and operates at the intersection of product usage analytics, customer health modeling, workflow automation, and applied AI. The mission is to transform raw customer
+    data—usage, engagement, and contract signals—into actionable insights delivered to the right people at the right time.
+
+
+    This is an early-career, high-potential role ideal for an engineering graduate or former process engineer pivoting into analytics and software.
+
+
+    **Key Duties & Responsibilities:**
+
+
+    **Build Customer Intelligence Workflows**
+
+
+    * Design and deploy account-level Slack summaries for CSMs and leadership.
+
+    * Translate product usage and contract data into operational signals.
+
+    * Build or extend data pipelines in partnership with Analytics Engineering.
+
+    * Develop Python-based automation to operationalize insights at scale.
+
+
+    **Improve Health & Renewal Predictability**
+
+
+    * Contribute to Seeq’s customer health scoring framework.
+
+    * Develop usage-to-renewal correlation models.
+
+    * Identify leading indicators of risk, exp'
+- id: 33569
+  company_id: 487
+  company_name: Arondite
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: null
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 1d3e2472-9db6-4a89-bd75-41e4897d497d
+  apply_url: https://apply.workable.com/arondite/j/4DB1A60B2B/apply
+  canonical_url: https://apply.workable.com/arondite/j/4DB1A60B2B/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-08T01:19:34Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 57057
+  company_id: 487
+  company_name: Arondite
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: null
+  role_family: software_engineering
+  seniority: unknown
+  source: company_direct
+  source_provider: workable
+  source_slug: arondite
+  source_job_id: 4DB1A60B2B
+  apply_url: https://apply.workable.com/j/4DB1A60B2B
+  canonical_url: https://apply.workable.com/j/4DB1A60B2B
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2025-10-27T00:00:00Z'
+  first_seen_at: '2026-08-20T21:29:06Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: '### About Arondite
+
+
+    Arondite enables organisations to wield autonomy, data and AI at scale. We equip operators with the foundational software to orchestrate their mix of platforms and capabilities, and then take mission-critical
+    decisions faster than their adversaries.
+
+
+    We exist to ensure the UK and its allies out-think, out-pace and out-adapt those who seek to threaten our values and way of life. Our technology is designed for deployment in the world’s most austere
+    environments, and is relied upon by the world’s most demanding operators. We deploy alongside them, bringing our technical expertise wherever it is needed.
+
+
+    **You will join Arondite at a pivotal moment in the company’s journey.** We are ambitious, building for the long-term and backed by globally renowned investors including [Index Ventures](https://www.indexventures.com/perspectives/arondite-raises-12m-to-unlock-safe-scalable-human-machine-teaming-with-ai/)
+    (Anthropic, Wiz, Figma, Revolut). Our company is being built by exceptional engineers - people who find high-impact and technically challenging work engaging and exciting, and who consistently deliver
+    outsized impact. You will collaborate with other brilliant minds '
+- id: 33571
+  company_id: 880
+  company_name: Homey
+  title: Junior Software Engineer - AI-Native
+  title_normalized: junior software engineer ai native
+  primary_metro: null
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 6afc654a-5326-48ff-a97e-39f9353340da
+  apply_url: https://apply.workable.com/homey/j/50DF9B3D53/apply
+  canonical_url: https://apply.workable.com/homey/j/50DF9B3D53/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-08T01:19:16Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 174802
+  company_id: 880
+  company_name: Homey
+  title: Junior Software Engineer (AI-Native)
+  title_normalized: junior software engineer ai native
+  primary_metro: null
+  role_family: software_engineering
+  seniority: new_grad
+  source: company_direct
+  source_provider: workable
+  source_slug: homey
+  source_job_id: 50DF9B3D53
+  apply_url: https://apply.workable.com/j/50DF9B3D53
+  canonical_url: https://apply.workable.com/j/50DF9B3D53
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-19T00:00:00Z'
+  first_seen_at: '2026-08-20T23:08:22Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: '**About Homey**
+
+
+    Moving home in the UK is notoriously slow and stressful. At Homey, we are changing that. We are an established, fast-growing business using technology to streamline property transactions, making the
+    process faster, more transparent, and more efficient for everyone involved.
+
+
+    **Check us out at Homey.co.uk.**
+
+
+    The Role
+
+
+    We aren''t looking for 10 years of legacy experience. We are looking for smart, adaptable, and ambitious engineers—whether you’ve just graduated, finished school, or are early in your coding journey.
+
+
+    At Homey, we don''t care if you haven''t memorized every syntax rule—we care that you know how to build things fast. We are looking for "AI-Native" engineers: people who see LLMs (like Claude Code,
+    Grok, or GitHub Copilot) as their superpower to ship high-quality code at speed.
+
+
+    **Requirements**
+
+
+    **Build & Iterate:** Develop and maintain features that directly impact how people buy and sell homes.
+
+
+    **Leverage AI:** Use modern AI coding agents and LLMs to accelerate your workflow, debug complex issues, and explore new solutions.
+
+
+    **Problem Solve:** Take ownership of tasks from day one with a "can-do" attitude—if you don''t know the answer, you''ll find it.
+
+
+    **'
+- id: 33495
+  company_id: 296
+  company_name: Luminance
+  title: Machine Learning Research Engineer
+  title_normalized: machine learning research engineer
+  primary_metro: null
+  role_family: ml_ai
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 7585e74f-2916-4691-b493-97166fd23c38
+  apply_url: https://apply.workable.com/luminance-1/j/9C39B34AB3/apply
+  canonical_url: https://apply.workable.com/luminance-1/j/9C39B34AB3/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-07T06:17:52Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 239231
+  company_id: 296
+  company_name: Luminance
+  title: Machine Learning Research Engineer
+  title_normalized: machine learning research engineer
+  primary_metro: null
+  role_family: ml_ai
+  seniority: unknown
+  source: company_direct
+  source_provider: workable
+  source_slug: luminance-1
+  source_job_id: 9C39B34AB3
+  apply_url: https://apply.workable.com/j/9C39B34AB3
+  canonical_url: https://apply.workable.com/j/9C39B34AB3
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2025-06-06T00:00:00Z'
+  first_seen_at: '2026-08-20T23:39:16Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: 'This is a fantastic opportunity to join market-leading UK AI company, Luminance. Named in Tech Nation’s prestigious Future Fifty list and the recipient of two Queen’s Awards, Luminance
+    is the world’s most advanced AI technology which is disrupting the legal profession.
+
+
+    Luminance is looking for dedicated and enthusiastic individuals with a strong academic background in Artificial Intelligence or a related field to join their R&D team based in Cambridge, UK. Successful
+    candidates will be part of a small, dynamic team responsible for: prototyping, building and implementing new approaches to AI problems; and determining output quality, efficiency, and feasibility compared
+    with other techniques in a data-driven manner.
+
+
+    This role is open to both graduates with a willingness to learn the desired skills, and more senior candidates with proven, prior experience in them.
+
+
+    If you are excited about this role but your skill or experience doesn’t perfectly align with the job description, we encourage you to apply anyway. At Luminance we are dedicated to building and promoting
+    an inclusive workplace where everyone can flourish. You might just be who we’re looking for, for this role or another –'
+- id: 33587
+  company_id: 886
+  company_name: Fifty-Five
+  title: Digital Analytics Associate Consultant
+  title_normalized: digital analytics associate consultant
+  primary_metro: null
+  role_family: other_nontech
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 171df98e-6146-40e8-a69b-36b0da737aef
+  apply_url: https://apply.workable.com/fifty-five/j/F21A38FE9E/apply
+  canonical_url: https://apply.workable.com/fifty-five/j/F21A38FE9E/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-08T01:17:34Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 126591
+  company_id: 886
+  company_name: Fifty-Five
+  title: Digital Analytics Associate Consultant
+  title_normalized: digital analytics associate consultant
+  primary_metro: null
+  role_family: other_nontech
+  seniority: new_grad
+  source: company_direct
+  source_provider: workable
+  source_slug: fifty-five
+  source_job_id: F21A38FE9E
+  apply_url: https://apply.workable.com/j/F21A38FE9E
+  canonical_url: https://apply.workable.com/j/F21A38FE9E
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2025-02-28T00:00:00Z'
+  first_seen_at: '2026-08-20T22:35:54Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: '**\*Autumn 2026 Start Date\***
+
+
+    **About the Role**
+
+
+    We are looking for a Digital Analytics Associate Consultant to join our London-based consulting team. This is a varied role which spans across website architecture, UX analysis, media advisory and digital
+    strategy. As a Consultant at 55, you will be working on marketing analytics and marketing activations as opposed to setting up and optimising campaigns, so we therefore are seeking applicants with some
+    prior experience in marketing or web analytics.
+
+
+    Working as part of a small, collaborative team, you will play a key role in delivering fifty-five data-led projects to multiple, big brand clients across industries such as luxury, automotive, retail
+    and beauty. These projects will be driven by client objectives relating to data collection, customer acquisition, onsite conversion optimisation and media-mix optimisation and you will be required to
+    promote a customer-centric vision of digital marketing, based on the systematic and methodical use of data to support decisions.
+
+
+    You will report to a Project Lead and work alongside other Consultants, Tracking Specialists, Cloud Engineers and Innovation Experts. Led by the Senior Consultant'
+- id: 33499
+  company_id: 483
+  company_name: AlphaHire
+  title: Predictive Analytics Fellow - Workforce Intelligence
+  title_normalized: predictive analytics fellow workforce intelligence
+  primary_metro: remote
+  role_family: unknown
+  seniority: principal
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 765a3599-3681-424b-acb8-7c0f9e80a287
+  apply_url: https://apply.workable.com/alphax/j/0ABEFABB05/apply
+  canonical_url: https://apply.workable.com/alphax/j/0ABEFABB05/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-07T06:17:46Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 52607
+  company_id: 483
+  company_name: AlphaHire
+  title: Predictive Analytics Fellow, Workforce Intelligence
+  title_normalized: predictive analytics fellow workforce intelligence
+  primary_metro: us_unknown
+  role_family: unknown
+  seniority: principal
+  source: company_direct
+  source_provider: workable
+  source_slug: alphax
+  source_job_id: 0ABEFABB05
+  apply_url: https://apply.workable.com/j/0ABEFABB05
+  canonical_url: https://apply.workable.com/j/0ABEFABB05
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-05-27T00:00:00Z'
+  first_seen_at: '2026-08-20T21:27:09Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: '### **About AlphaHire Workforce Intelligence Lab (WIL)**
+
+
+    The AlphaHire Workforce Intelligence Lab (WIL) is an applied workforce research initiative focused on construction labor markets, workforce planning systems, compensation intelligence, labor scarcity
+    analysis, and operational workforce visibility.
+
+
+    WIL develops workforce intelligence frameworks and regional labor market analysis designed to support operational decision-making across the construction industry.
+
+
+    The lab synthesizes publicly available labor data, compensation trends, contractor growth indicators, workforce demand signals, and construction activity into workforce intelligence systems for construction
+    firms and industry operators.
+
+
+    Learn more:
+
+
+    [AlphaHire Workforce Intelligence Lab (WIL)](https://www.alpha-hire.com/wil/)
+
+
+    ### **About the role**
+
+
+    We are seeking Predictive Analytics Fellows interested in workforce forecasting support systems, labor market analytics, operational workforce modeling, and workforce intelligence initiatives focused
+    on the construction industry.
+
+
+    This fellowship is designed for graduate students, PhD candidates, analysts, data scientists, operations researchers, and analytically oriented'
+- id: 33576
+  company_id: 882
+  company_name: Christie
+  title: Motor Repair Technician
+  title_normalized: motor repair technician
+  primary_metro: null
+  role_family: other_nontech
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 72d71f3c-7e47-4d52-aaf3-407c1f8bea58
+  apply_url: https://apply.workable.com/christie-lites-3/j/25F36FBEF7/apply
+  canonical_url: https://apply.workable.com/christie-lites-3/j/25F36FBEF7/apply
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-08-08T01:18:23Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 98337
+  company_id: 882
+  company_name: Christie
+  title: Motor Repair Technician
+  title_normalized: motor repair technician
+  primary_metro: null
+  role_family: other_nontech
+  seniority: unknown
+  source: company_direct
+  source_provider: workable
+  source_slug: christie-lites-3
+  source_job_id: B89AE72B33
+  apply_url: https://apply.workable.com/j/B89AE72B33
+  canonical_url: https://apply.workable.com/j/B89AE72B33
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-06-05T00:00:00Z'
+  first_seen_at: '2026-08-20T22:13:19Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: '**Job Purpose**
+
+
+    The Repair Technician repairs equipment to Christie Lites standards.
+
+
+    **Responsibilities**
+
+
+    **1. Diagnoses and fixes issues with CL rental equipment by:**
+
+
+    * Repairing electrical and/or mechanical faults in Lighting, Control and Special FX products including ancillary equipment such as main distribution and networking.
+
+    * Limiting the electronic repairs to circuit board level.
+
+    * Modifying and upgrading ORPL equipment to CL standards as specified in CL Technotes.
+
+    * Recording all repairs in Repair Tracking Systems.
+
+    * Placing Parts orders when not in stock.
+
+    * Carrying out preventative maintenance as outlined in the Service Reference Guide.
+
+
+    **2. Maintains a clean and organized work area by:**
+
+
+    * Ensuring all tools and supplies are returned to proper storage areas at the end of shift.
+
+    * Ensuring equipment waiting for repair is stored in an organized and tidy manner.
+
+    * Cleaning workstation and common areas as assigned.
+
+    * Removing recycling and waste to designated disposal areas.
+
+    * Informing Department Head of low stocks of supplies.
+
+
+    **Requirements**
+
+
+    Essential attributes for success in this role
+
+
+    **Personal Attributes**
+
+
+    * Self-motivated, ability to set and meet goals.
+
+    '
+- id: 31517
+  company_id: 167
+  company_name: DellFor Technologies
+  title: Entry Level .Net Developer
+  title_normalized: entry level .net developer
+  primary_metro: null
+  role_family: software_engineering
+  seniority: new_grad
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 369aa74a-530a-4869-98e7-46581120d496
+  apply_url: https://jobs.smartrecruiters.com/DellforTechnologies/102104667
+  canonical_url: https://jobs.smartrecruiters.com/DellforTechnologies/102104667
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-02-20T15:20:23Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 115923
+  company_id: 167
+  company_name: DellFor Technologies
+  title: Entry Level .Net Developer
+  title_normalized: entry level .net developer
+  primary_metro: new_york
+  role_family: software_engineering
+  seniority: new_grad
+  source: company_direct
+  source_provider: smartrecruiters
+  source_slug: DellforTechnologies
+  source_job_id: '102105305'
+  apply_url: https://jobs.smartrecruiters.com/DellforTechnologies/102105305
+  canonical_url: https://jobs.smartrecruiters.com/DellforTechnologies/102105305
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2016-11-11T20:09:51Z'
+  first_seen_at: '2026-08-20T22:26:01Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: '### Job Description
+
+
+    * Any Bachelor Degree in Computer Science Stream.
+
+    * Ability to multi-task projects\*
+
+    * Basic knowledge\*of programming, C++, VB, C#\*
+
+    * Basic foundation of programming concepts and methods\*
+
+    * Working proficiency in Excel, Word, PowerPoint, and HTML/IDE tools\*
+
+    * Effective communication, both written and verbal\*
+
+    * ASP.Net experience a plus\*
+
+    * SQL Server experience a plus\*Fast learner, quality consciousness and committed to deadlines
+
+
+    ### Qualifications
+
+
+    * College degree
+
+    * Domain experience in Finance, Banking, Insurance, Retail or Healthcare and/or benefit administration is a plus
+
+    * Excellent writing/documentation, communication, analysis and organizational skills required
+
+    * Strong aptitude in both business and technology
+
+    * Self-starter with excellent organizational and time management skills
+
+    * Fast learner, quality consciousness and committed to deadline
+
+
+    ### Additional Information
+
+
+    **Highlights and benefits**
+
+
+    * **We are a registered E verified company**
+
+    * **Starting salary between $ 60,000 with regular increments**
+
+    * **Free classroom skill enhancement program**
+
+    * **Relocation allowance**
+
+    * **Referral bonus**
+
+    * **On the job support from experienced profess'
+- id: 32850
+  company_id: 179
+  company_name: Motorola
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: null
+  role_family: software_engineering
+  seniority: unknown
+  source: aggregator
+  source_provider: github
+  source_slug: SimplifyJobs/New-Grad-Positions
+  source_job_id: 0e645a26-5aa4-441c-b793-1ef8516245ca
+  apply_url: https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Glasgow-UK-ZUK118/Software-Engineer_R66979
+  canonical_url: https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Glasgow-UK-ZUK118/Software-Engineer_R66979
+  base_posted_min: null
+  base_posted_max: null
+  posted_at: '2026-07-28T00:00:00Z'
+  first_seen_at: '2026-08-20T21:07:33Z'
+  delisted_at: null
+  description_fetched: 0
+  description_md: null
+- id: 259744
+  company_id: 179
+  company_name: Motorola
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: chicago
+  role_family: software_engineering
+  seniority: unknown
+  source: company_direct
+  source_provider: workday
+  source_slug: motorolasolutions/wd5/Careers
+  source_job_id: R66351
+  apply_url: https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Schaumburg-IL/Software-Engineer_R66351
+  canonical_url: https://motorolasolutions.wd5.myworkdayjobs.com/en-US/Careers/job/Schaumburg-IL/Software-Engineer_R66351
+  base_posted_min: 63800.0
+  base_posted_max: 97600.0
+  posted_at: '2026-07-22T00:00:00Z'
+  first_seen_at: '2026-08-20T23:57:52Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: "## **Company Overview**\n\nAt Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep\
+    \ people safer everywhere. We build and connect technologies to help protect people, property and places. Our solutions foster the collaboration that’s critical for safer communities, safer schools,\
+    \ safer hospitals, safer businesses, and ultimately, safer nations. Connect with a career that matters, and help us build a safer future.\n\n## **Department Overview**\n\nOur RF Site Software Engineering\
+    \ organization, a key component of the ASTRO Networks business segment at Motorola Solutions, consists of a diverse group of software engineers, product architects, system architects, and test engineers.\
+    \ We are situated across various global locations, working collaboratively to develop next-generation RF Site solutions.  \n  \nLeveraging the latest in virtualization technologies on a robust Linux\
+    \ platform, our team follows modern software development practices such as continuous integration/continuous deployment, DevOps, component-level and system-level automated testing. We use Agile methodologies\
+    \ to organize our work"
+- id: 259423
+  company_id: 179
+  company_name: Motorola
+  title: Software Engineer
+  title_normalized: software engineer
+  primary_metro: us_unknown
+  role_family: software_engineering
+  seniority: unknown
+  source: company_direct
+  source_provider: workday
+  source_slug: motorolasolutions/wd5/Careers
+  source_job_id: R67011
+  apply_url: https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Allen-TX-TX139/Software-Engineer_R67011
+  canonical_url: https://motorolasolutions.wd5.myworkdayjobs.com/en-US/Careers/job/Allen-TX-TX139/Software-Engineer_R67011
+  base_posted_min: 83800.0
+  base_posted_max: 107600.0
+  posted_at: '2026-08-17T00:00:00Z'
+  first_seen_at: '2026-08-20T23:57:52Z'
+  delisted_at: null
+  description_fetched: 1
+  description_md: "## **Company Overview**\n\nAt Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep\
+    \ people safer everywhere. We build and connect technologies to help protect people, property and places. Our solutions foster the collaboration that’s critical for safer communities, safer schools,\
+    \ safer hospitals, safer businesses, and ultimately, safer nations. Connect with a career that matters, and help us build a safer future.\n\n## **Department Overview**\n\nMotorola Solutions is a global\
+    \ leader in public safety and enterprise security. We provide mission-critical communication and data solutions that help our customers make the world safer and more productive.  \n  \nThe Unified Communications\
+    \ team has a mission to become the leader in creating a highly scalable software platform and communication applications for first responders and enterprise workgroups. Our customers rely on these solutions\
+    \ to run their critical business operations in the public safety, manufacturing, and infrastructure sectors. Every single day, we are shaping the future of mobile workgroup solutions for public safety\
+    \ and industria"

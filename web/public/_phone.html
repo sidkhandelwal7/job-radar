@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><title>phone harness</title>
+<!-- dev harness: the app at phone width (390×844) next to a small tablet width; not linked from the app -->
+<body style="margin:0;background:#6b6f66;display:flex;gap:24px;padding:16px;font:12px system-ui;color:#fff">
+<div><div>390 × 844</div><iframe id="a" style="width:390px;height:844px;border:0;background:#fff"></iframe></div>
+<div><div>640 × 844</div><iframe id="b" style="width:640px;height:844px;border:0;background:#fff"></iframe></div>
+<script>
+const h = location.hash || '#/table?sort=priority';
+document.getElementById('a').src = '/' + h; document.getElementById('b').src = '/' + h;
+</script>

@@ -1,0 +1,120 @@
+# State + local income tax, versioned 2026-08.
+# effective_rate_at_100k: approximate EFFECTIVE (not marginal) state+local income tax rate for a
+#   single filer with ~$100k wages, standard deductions, 2026 brackets as best known. Federal tax
+#   is identical everywhere and is excluded — only the delta vs. the baseline metro's jurisdiction
+#   (metros.yaml `tax` of config.baseline.metro) matters.
+# These are estimates for ranking; they are shown as "≈" in the UI, never as tax advice.
+
+version: 2026-08
+
+jurisdictions:
+  va:            { name: Virginia,                     effective_rate_at_100k: 0.052, note: "5.75% top marginal, no local tax" }
+  ny_nyc:        { name: New York State + NYC,         effective_rate_at_100k: 0.094, note: "NYS ~5.9% eff + NYC ~3.6% eff" }
+  ny:            { name: New York State (outside NYC), effective_rate_at_100k: 0.058 }
+  ca:            { name: California,                   effective_rate_at_100k: 0.062, note: "9.3% marginal bracket; ~6.2% effective at $100k" }
+  wa:            { name: Washington,                   effective_rate_at_100k: 0.000, note: "No state income tax" }
+  tx:            { name: Texas,                        effective_rate_at_100k: 0.000, note: "No state income tax" }
+  fl:            { name: Florida,                      effective_rate_at_100k: 0.000, note: "No state income tax" }
+  nv:            { name: Nevada,                       effective_rate_at_100k: 0.000 }
+  tn:            { name: Tennessee,                    effective_rate_at_100k: 0.000 }
+  wy:            { name: Wyoming,                      effective_rate_at_100k: 0.000 }
+  sd:            { name: South Dakota,                 effective_rate_at_100k: 0.000 }
+  ak:            { name: Alaska,                       effective_rate_at_100k: 0.000 }
+  nh:            { name: New Hampshire,                effective_rate_at_100k: 0.000, note: "No wage tax" }
+  ma:            { name: Massachusetts,                effective_rate_at_100k: 0.048 }
+  il:            { name: Illinois,                     effective_rate_at_100k: 0.049, note: "4.95% flat" }
+  pa_pittsburgh: { name: Pennsylvania + Pittsburgh,    effective_rate_at_100k: 0.061, note: "3.07% flat + 3% city wage tax" }
+  pa_philadelphia: { name: Pennsylvania + Philadelphia, effective_rate_at_100k: 0.068, note: "3.07% + ~3.75% wage tax" }
+  pa:            { name: Pennsylvania,                 effective_rate_at_100k: 0.035, note: "3.07% flat + typical ~1% local EIT" }
+  ga:            { name: Georgia,                      effective_rate_at_100k: 0.051 }
+  co:            { name: Colorado,                     effective_rate_at_100k: 0.042 }
+  nc:            { name: North Carolina,               effective_rate_at_100k: 0.041 }
+  az:            { name: Arizona,                      effective_rate_at_100k: 0.023 }
+  ut:            { name: Utah,                         effective_rate_at_100k: 0.044 }
+  or:            { name: Oregon,                       effective_rate_at_100k: 0.082, note: "9% marginal; Portland adds metro/county taxes above thresholds" }
+  mn:            { name: Minnesota,                    effective_rate_at_100k: 0.058 }
+  md:            { name: Maryland,                     effective_rate_at_100k: 0.072, note: "state + county piggyback ~3.2%" }
+  nj:            { name: New Jersey,                   effective_rate_at_100k: 0.039 }
+  ct:            { name: Connecticut,                  effective_rate_at_100k: 0.048 }
+  oh:            { name: Ohio,                         effective_rate_at_100k: 0.048, note: "state ~2.6% + municipal ~2.25%" }
+  mo:            { name: Missouri,                     effective_rate_at_100k: 0.045, note: "+1% KC/StL earnings tax where applicable" }
+  in:            { name: Indiana,                      effective_rate_at_100k: 0.044, note: "3.0% + county ~1.5%" }
+  wi:            { name: Wisconsin,                    effective_rate_at_100k: 0.048 }
+  mi:            { name: Michigan,                     effective_rate_at_100k: 0.043, note: "4.25% flat; Detroit adds 2.4%" }
+  dc:            { name: District of Columbia,         effective_rate_at_100k: 0.068 }
+  de:            { name: Delaware,                     effective_rate_at_100k: 0.054 }
+  ne:            { name: Nebraska,                     effective_rate_at_100k: 0.048 }
+  ia:            { name: Iowa,                         effective_rate_at_100k: 0.038 }
+  ri:            { name: Rhode Island,                 effective_rate_at_100k: 0.037 }
+  al:            { name: Alabama,                      effective_rate_at_100k: 0.045 }
+  nm:            { name: New Mexico,                   effective_rate_at_100k: 0.042 }
+  ks:            { name: Kansas,                       effective_rate_at_100k: 0.048 }
+  ky:            { name: Kentucky,                     effective_rate_at_100k: 0.040 }
+  la:            { name: Louisiana,                    effective_rate_at_100k: 0.035 }
+  ok:            { name: Oklahoma,                     effective_rate_at_100k: 0.042 }
+  sc:            { name: South Carolina,               effective_rate_at_100k: 0.051 }
+  ar:            { name: Arkansas,                     effective_rate_at_100k: 0.040 }
+  ms:            { name: Mississippi,                  effective_rate_at_100k: 0.042 }
+  wv:            { name: West Virginia,                effective_rate_at_100k: 0.045 }
+  id:            { name: Idaho,                        effective_rate_at_100k: 0.052 }
+  mt:            { name: Montana,                      effective_rate_at_100k: 0.052 }
+  nd:            { name: North Dakota,                 effective_rate_at_100k: 0.015 }
+  vt:            { name: Vermont,                      effective_rate_at_100k: 0.053 }
+  me:            { name: Maine,                        effective_rate_at_100k: 0.060 }
+  hi:            { name: Hawaii,                       effective_rate_at_100k: 0.072 }
+  us_unknown:    { name: US (state unknown),           effective_rate_at_100k: 0.045, note: "national-average prior" }
+  remote:        { name: Remote (taxed where you live), effective_rate_at_100k: 0.045, note: "placeholder only: the scorer substitutes the baseline metro's own rate for remote postings" }
+
+# State abbreviation → jurisdiction key (for US locations that matched no metro)
+state_to_jurisdiction:
+  VA: va
+  NY: ny
+  CA: ca
+  WA: wa
+  TX: tx
+  FL: fl
+  NV: nv
+  TN: tn
+  WY: wy
+  SD: sd
+  AK: ak
+  NH: nh
+  MA: ma
+  IL: il
+  PA: pa
+  GA: ga
+  CO: co
+  NC: nc
+  AZ: az
+  UT: ut
+  OR: or
+  MN: mn
+  MD: md
+  NJ: nj
+  CT: ct
+  OH: oh
+  MO: mo
+  IN: in
+  WI: wi
+  MI: mi
+  DC: dc
+  DE: de
+  NE: ne
+  IA: ia
+  RI: ri
+  AL: al
+  NM: nm
+  KS: ks
+  KY: ky
+  LA: la
+  OK: ok
+  SC: sc
+  AR: ar
+  MS: ms
+  WV: wv
+  ID: id
+  MT: mt
+  ND: nd
+  VT: vt
+  ME: me
+  HI: hi

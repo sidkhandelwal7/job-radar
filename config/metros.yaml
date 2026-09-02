@@ -1,0 +1,559 @@
+# Metro reference table. Versioned 2026-08.
+#
+# col_index: rent-weighted cost-of-living index, DC metro = 100 (only ratios matter; the baseline
+#   metro's own value is the reference). These are approximate,
+#   assembled from public rent indices (Zillow ZORI / Apartment List style) as of mid-2026 and
+#   rounded. They are a PRIOR for the informational `real_terms_vs_baseline` figure — edit freely.
+# premium_bucket: which `location_utility_premium` entry applies (config.yaml §9b).
+# tax: jurisdiction key into tax_tables.yaml.
+# aliases: lowercase substrings/phrases that map a raw location string to this metro.
+#   Matching is: exact alias → city+state pattern → alias substring. First match wins, ordered by
+#   alias length (longest first) so "new york city" beats "york".
+
+version: 2026-08
+
+metros:
+  new_york:
+    name: New York, NY
+    state: NY
+    country: US
+    col_index: 140
+    premium_bucket: new_york
+    tax: ny_nyc
+    major_tech_hub: true
+    aliases: [new york, nyc, new york city, manhattan, brooklyn, queens, new york, ny, jersey city, hoboken, long island city, newark, nj - jersey city, stamford, greenwich, white plains, "new york, united states", "new york, new york"]
+  san_francisco:
+    name: San Francisco Bay Area, CA
+    state: CA
+    country: US
+    col_index: 150
+    premium_bucket: san_francisco
+    tax: ca
+    major_tech_hub: true
+    aliases: [san francisco, sf bay area, bay area, san jose, palo alto, mountain view, menlo park, sunnyvale, santa clara, cupertino, redwood city, oakland, berkeley, south san francisco, san mateo, foster city, fremont, san bruno, emeryville, burlingame, los altos, los gatos, milpitas, campbell, pleasanton, "sf, ca", "sf", sfo]
+  seattle:
+    name: Seattle, WA
+    state: WA
+    country: US
+    col_index: 115
+    premium_bucket: seattle
+    tax: wa
+    major_tech_hub: true
+    aliases: [seattle, bellevue, redmond, kirkland, washington - seattle, "seattle, wa", "wa - seattle"]
+  washington_dc:
+    name: Washington, DC metro
+    state: VA
+    country: US
+    col_index: 100
+    premium_bucket: washington_dc
+    tax: va
+    major_tech_hub: false
+    baseline_market: false         # set true on your baseline offer's metro: same_market_as_baseline_offer applies there
+    aliases: [washington, dc, washington dc, "washington, d.c.", district of columbia, mclean, arlington, reston, herndon, vienna, alexandria, bethesda, chantilly, fairfax, falls church, rockville, silver spring, springfield va, "va - mclean", "mclean, va", "arlington, va", "reston, va", "washington, dc"]
+  boston:
+    name: Boston, MA
+    state: MA
+    country: US
+    col_index: 125
+    premium_bucket: other_major_tech_hub
+    tax: ma
+    major_tech_hub: true
+    aliases: [boston, cambridge ma, "cambridge, ma", "cambridge, massachusetts", somerville, waltham, burlington ma, lexington ma, needham, quincy ma, "boston, ma"]
+  austin:
+    name: Austin, TX
+    state: TX
+    country: US
+    col_index: 85
+    premium_bucket: other_major_tech_hub
+    tax: tx
+    major_tech_hub: true
+    aliases: [austin, round rock, "austin, tx"]
+  chicago:
+    name: Chicago, IL
+    state: IL
+    country: US
+    col_index: 85
+    premium_bucket: other_major_tech_hub
+    tax: il
+    major_tech_hub: true
+    aliases: [chicago, evanston, naperville, schaumburg, "chicago, il"]
+  los_angeles:
+    name: Los Angeles, CA
+    state: CA
+    country: US
+    col_index: 120
+    premium_bucket: other_major_tech_hub
+    tax: ca
+    major_tech_hub: true
+    aliases: [los angeles, "la, ca", santa monica, culver city, playa vista, venice ca, el segundo, pasadena, burbank, glendale ca, irvine, orange county, newport beach, long beach, torrance, "los angeles, ca"]
+  denver:
+    name: Denver, CO
+    state: CO
+    country: US
+    col_index: 90
+    premium_bucket: other_major_tech_hub
+    tax: co
+    major_tech_hub: true
+    aliases: [denver, boulder, broomfield, louisville co, englewood co, "denver, co"]
+  pittsburgh:
+    name: Pittsburgh, PA
+    state: PA
+    country: US
+    col_index: 70
+    premium_bucket: elsewhere
+    tax: pa_pittsburgh
+    aliases: [pittsburgh, "pittsburgh, pa"]
+  san_diego:
+    name: San Diego, CA
+    state: CA
+    country: US
+    col_index: 115
+    premium_bucket: elsewhere
+    tax: ca
+    aliases: [san diego, la jolla, carlsbad, "san diego, ca"]
+  atlanta:
+    name: Atlanta, GA
+    state: GA
+    country: US
+    col_index: 80
+    premium_bucket: elsewhere
+    tax: ga
+    aliases: [atlanta, alpharetta, "atlanta, ga"]
+  dallas:
+    name: Dallas–Fort Worth, TX
+    state: TX
+    country: US
+    col_index: 80
+    premium_bucket: elsewhere
+    tax: tx
+    aliases: [dallas, plano, irving, richardson, fort worth, frisco, westlake tx, "dallas, tx", addison tx]
+  houston:
+    name: Houston, TX
+    state: TX
+    country: US
+    col_index: 75
+    premium_bucket: elsewhere
+    tax: tx
+    aliases: [houston, "houston, tx"]
+  phoenix:
+    name: Phoenix, AZ
+    state: AZ
+    country: US
+    col_index: 80
+    premium_bucket: elsewhere
+    tax: az
+    aliases: [phoenix, tempe, scottsdale, chandler az, mesa az, "phoenix, az"]
+  philadelphia:
+    name: Philadelphia, PA
+    state: PA
+    country: US
+    col_index: 85
+    premium_bucket: elsewhere
+    tax: pa_philadelphia
+    aliases: [philadelphia, philly, conshohocken, malvern, wayne pa, king of prussia, "philadelphia, pa"]
+  miami:
+    name: Miami, FL
+    state: FL
+    country: US
+    col_index: 105
+    premium_bucket: elsewhere
+    tax: fl
+    aliases: [miami, fort lauderdale, boca raton, "miami, fl"]
+  charlotte:
+    name: Charlotte, NC
+    state: NC
+    country: US
+    col_index: 75
+    premium_bucket: elsewhere
+    tax: nc
+    aliases: [charlotte, "charlotte, nc"]
+  raleigh:
+    name: Raleigh–Durham, NC
+    state: NC
+    country: US
+    col_index: 78
+    premium_bucket: elsewhere
+    tax: nc
+    aliases: [raleigh, durham, cary nc, research triangle, morrisville nc, chapel hill, "raleigh, nc"]
+  minneapolis:
+    name: Minneapolis, MN
+    state: MN
+    country: US
+    col_index: 80
+    premium_bucket: elsewhere
+    tax: mn
+    aliases: [minneapolis, st. paul, saint paul, "minneapolis, mn"]
+  salt_lake_city:
+    name: Salt Lake City, UT
+    state: UT
+    country: US
+    col_index: 85
+    premium_bucket: elsewhere
+    tax: ut
+    aliases: [salt lake city, lehi, provo, draper ut, "salt lake city, ut"]
+  portland:
+    name: Portland, OR
+    state: OR
+    country: US
+    col_index: 90
+    premium_bucket: elsewhere
+    tax: or
+    aliases: [portland, hillsboro, beaverton, "portland, or"]
+  nashville:
+    name: Nashville, TN
+    state: TN
+    country: US
+    col_index: 82
+    premium_bucket: elsewhere
+    tax: tn
+    aliases: [nashville, franklin tn, "nashville, tn"]
+  columbus:
+    name: Columbus, OH
+    state: OH
+    country: US
+    col_index: 72
+    premium_bucket: elsewhere
+    tax: oh
+    aliases: [columbus, "columbus, oh", dublin oh]
+  cincinnati:
+    name: Cincinnati, OH
+    state: OH
+    country: US
+    col_index: 70
+    premium_bucket: elsewhere
+    tax: oh
+    aliases: [cincinnati, "cincinnati, oh"]
+  cleveland:
+    name: Cleveland, OH
+    state: OH
+    country: US
+    col_index: 68
+    premium_bucket: elsewhere
+    tax: oh
+    aliases: [cleveland, "cleveland, oh"]
+  detroit:
+    name: Detroit, MI
+    state: MI
+    country: US
+    col_index: 70
+    premium_bucket: elsewhere
+    tax: mi
+    aliases: [detroit, ann arbor, dearborn, troy mi, "detroit, mi"]
+  st_louis:
+    name: St. Louis, MO
+    state: MO
+    country: US
+    col_index: 68
+    premium_bucket: elsewhere
+    tax: mo
+    aliases: [st. louis, st louis, saint louis, o'fallon, ofallon, "o'fallon, missouri", "o'fallon, mo", "st. louis, mo"]
+  kansas_city:
+    name: Kansas City, MO
+    state: MO
+    country: US
+    col_index: 70
+    premium_bucket: elsewhere
+    tax: mo
+    aliases: [kansas city, overland park, "kansas city, mo"]
+  baltimore:
+    name: Baltimore, MD
+    state: MD
+    country: US
+    col_index: 85
+    premium_bucket: elsewhere
+    tax: md
+    aliases: [baltimore, columbia md, "baltimore, md", annapolis]
+  richmond:
+    name: Richmond, VA
+    state: VA
+    country: US
+    col_index: 78
+    premium_bucket: elsewhere
+    tax: va
+    aliases: [richmond, "richmond, va", glen allen]
+  wilmington_de:
+    name: Wilmington, DE
+    state: DE
+    country: US
+    col_index: 78
+    premium_bucket: elsewhere
+    tax: de
+    aliases: [wilmington, "wilmington, de", "wilmington, delaware", newark de]
+  tampa:
+    name: Tampa, FL
+    state: FL
+    country: US
+    col_index: 85
+    premium_bucket: elsewhere
+    tax: fl
+    aliases: [tampa, st. petersburg, "tampa, fl"]
+  orlando:
+    name: Orlando, FL
+    state: FL
+    country: US
+    col_index: 82
+    premium_bucket: elsewhere
+    tax: fl
+    aliases: [orlando, lake mary, "orlando, fl"]
+  jacksonville:
+    name: Jacksonville, FL
+    state: FL
+    country: US
+    col_index: 75
+    premium_bucket: elsewhere
+    tax: fl
+    aliases: [jacksonville, "jacksonville, fl"]
+  indianapolis:
+    name: Indianapolis, IN
+    state: IN
+    country: US
+    col_index: 70
+    premium_bucket: elsewhere
+    tax: in
+    aliases: [indianapolis, "indianapolis, in", carmel in]
+  milwaukee:
+    name: Milwaukee, WI
+    state: WI
+    country: US
+    col_index: 72
+    premium_bucket: elsewhere
+    tax: wi
+    aliases: [milwaukee, "milwaukee, wi"]
+  madison:
+    name: Madison, WI
+    state: WI
+    country: US
+    col_index: 78
+    premium_bucket: elsewhere
+    tax: wi
+    aliases: [madison, "madison, wi"]
+  omaha:
+    name: Omaha, NE
+    state: NE
+    country: US
+    col_index: 68
+    premium_bucket: elsewhere
+    tax: ne
+    aliases: [omaha, "omaha, ne"]
+  des_moines:
+    name: Des Moines, IA
+    state: IA
+    country: US
+    col_index: 65
+    premium_bucket: elsewhere
+    tax: ia
+    aliases: [des moines, "des moines, ia"]
+  hartford:
+    name: Hartford, CT
+    state: CT
+    country: US
+    col_index: 80
+    premium_bucket: elsewhere
+    tax: ct
+    aliases: [hartford, "hartford, ct", farmington ct, windsor ct]
+  providence:
+    name: Providence, RI
+    state: RI
+    country: US
+    col_index: 85
+    premium_bucket: elsewhere
+    tax: ri
+    aliases: [providence, "providence, ri", smithfield ri]
+  las_vegas:
+    name: Las Vegas, NV
+    state: NV
+    country: US
+    col_index: 82
+    premium_bucket: elsewhere
+    tax: nv
+    aliases: [las vegas, henderson nv, "las vegas, nv"]
+  sacramento:
+    name: Sacramento, CA
+    state: CA
+    country: US
+    col_index: 95
+    premium_bucket: elsewhere
+    tax: ca
+    aliases: [sacramento, "sacramento, ca", folsom, roseville ca]
+  princeton:
+    name: Princeton / Central NJ
+    state: NJ
+    country: US
+    col_index: 100
+    premium_bucket: elsewhere
+    tax: nj
+    aliases: [princeton, "princeton, nj", new brunswick, piscataway, bridgewater nj, basking ridge, warren nj, whippany, parsippany, morristown, iselin, woodbridge nj, weehawken]
+  buffalo:
+    name: Buffalo, NY
+    state: NY
+    country: US
+    col_index: 65
+    premium_bucket: elsewhere
+    tax: ny
+    aliases: [buffalo, "buffalo, ny"]
+  rochester:
+    name: Rochester, NY
+    state: NY
+    country: US
+    col_index: 65
+    premium_bucket: elsewhere
+    tax: ny
+    aliases: [rochester, "rochester, ny"]
+  albany:
+    name: Albany, NY
+    state: NY
+    country: US
+    col_index: 72
+    premium_bucket: elsewhere
+    tax: ny
+    aliases: [albany, "albany, ny"]
+  huntsville:
+    name: Huntsville, AL
+    state: AL
+    country: US
+    col_index: 65
+    premium_bucket: elsewhere
+    tax: al
+    aliases: [huntsville, "huntsville, al"]
+  colorado_springs:
+    name: Colorado Springs, CO
+    state: CO
+    country: US
+    col_index: 80
+    premium_bucket: elsewhere
+    tax: co
+    aliases: [colorado springs, "colorado springs, co"]
+  costa_mesa:
+    name: Costa Mesa, CA
+    state: CA
+    country: US
+    col_index: 120
+    premium_bucket: elsewhere
+    tax: ca
+    aliases: [costa mesa, "costa mesa, ca"]
+  albuquerque:
+    name: Albuquerque, NM
+    state: NM
+    country: US
+    col_index: 72
+    premium_bucket: elsewhere
+    tax: nm
+    aliases: [albuquerque, "albuquerque, nm"]
+
+# Special buckets handled in code, listed here for documentation:
+#   remote      — "Remote", "Remote - US", "US Remote", "Anywhere (US)" → premium_bucket remote, tax = baseline (VA) for estimation
+#   multiple    — "Multiple Locations", "Various" → preserved as is_multiple_locations; metros from any explicit list
+#   us_unknown  — a US location that matched no metro → premium elsewhere, COL 85 (US non-hub prior), tax = state if parseable
+#   international — matched a non-US country → out of default views, high_pay_international view only
+
+us_states:
+  AL: Alabama
+  AK: Alaska
+  AZ: Arizona
+  AR: Arkansas
+  CA: California
+  CO: Colorado
+  CT: Connecticut
+  DE: Delaware
+  DC: District of Columbia
+  FL: Florida
+  GA: Georgia
+  HI: Hawaii
+  ID: Idaho
+  IL: Illinois
+  IN: Indiana
+  IA: Iowa
+  KS: Kansas
+  KY: Kentucky
+  LA: Louisiana
+  ME: Maine
+  MD: Maryland
+  MA: Massachusetts
+  MI: Michigan
+  MN: Minnesota
+  MS: Mississippi
+  MO: Missouri
+  MT: Montana
+  NE: Nebraska
+  NV: Nevada
+  NH: New Hampshire
+  NJ: New Jersey
+  NM: New Mexico
+  NY: New York
+  NC: North Carolina
+  ND: North Dakota
+  OH: Ohio
+  OK: Oklahoma
+  OR: Oregon
+  PA: Pennsylvania
+  RI: Rhode Island
+  SC: South Carolina
+  SD: South Dakota
+  TN: Tennessee
+  TX: Texas
+  UT: Utah
+  VT: Vermont
+  VA: Virginia
+  WA: Washington
+  WV: West Virginia
+  WI: Wisconsin
+  WY: Wyoming
+
+# Country detection for international postings (lowercase substrings).
+countries:
+  CA: [canada, toronto, vancouver, montreal, montréal, waterloo, ottawa, calgary, "ontario", "british columbia", quebec]
+  GB: [united kingdom, uk, london, england, manchester, edinburgh, cambridge uk, "london, uk", "london, united kingdom", bristol uk]
+  IE: [ireland, dublin]
+  DE: [germany, berlin, munich, münchen, frankfurt, hamburg]
+  FR: [france, paris]
+  NL: [netherlands, amsterdam]
+  CH: [switzerland, zurich, zürich, geneva]
+  SE: [sweden, stockholm]
+  PL: [poland, warsaw, krakow, kraków, wroclaw, wrocław, gdansk]
+  ES: [spain, madrid, barcelona]
+  PT: [portugal, lisbon]
+  IT: [italy, milan, rome]
+  IN: [india, bangalore, bengaluru, hyderabad, pune, mumbai, chennai, gurgaon, gurugram, noida, new delhi]
+  SG: [singapore]
+  HK: [hong kong]
+  JP: [japan, tokyo]
+  KR: [korea, seoul]
+  AU: [australia, sydney, melbourne]
+  NZ: [new zealand, auckland]
+  IL: [israel, tel aviv, yokneam, haifa, herzliya]
+  BR: [brazil, são paulo, sao paulo]
+  MX: [mexico, guadalajara, mexico city, monterrey]
+  AR: [argentina, buenos aires]
+  CO: [colombia, bogota, bogotá, medellin, medellín]
+  AE: [dubai, uae, united arab emirates, abu dhabi]
+  TW: [taiwan, taipei, hsinchu]
+  CN: [china, shanghai, beijing, shenzhen]
+  PH: [philippines, manila]
+  LT: [lithuania, vilnius]
+  CZ: [czech, prague]
+  RO: [romania, bucharest]
+  HU: [hungary, budapest]
+  BE: [belgium, brussels]
+  DK: [denmark, copenhagen]
+  NO: [norway, oslo]
+  FI: [finland, helsinki]
+  AT: [austria, vienna austria]
+  EE: [estonia, tallinn]
+  GR: [greece, athens]
+  TR: [turkey, istanbul]
+  ZA: [south africa, cape town, johannesburg]
+  NG: [nigeria, lagos]
+  KE: [kenya, nairobi]
+  EG: [egypt, cairo]
+  CL: [chile, santiago]
+  PE: [peru, lima]
+  CR: [costa rica, san jose cr, heredia]
+  VN: [vietnam, ho chi minh, hanoi]
+  TH: [thailand, bangkok]
+  ID: [indonesia, jakarta]
+  MY: [malaysia, kuala lumpur]
+  PK: [pakistan, karachi, lahore]
+  BD: [bangladesh, dhaka]
+  UA: [ukraine, kyiv]
+  RS: [serbia, belgrade]
+  BG: [bulgaria, sofia]

@@ -1,0 +1,231 @@
+# Title normalization rules. Regexes are case-insensitive, applied to the title with
+# punctuation squashed. Lists are ordered: first match wins within each section.
+# `radar rescore` re-applies these to every stored title — edit freely.
+
+version: 2026-08
+
+# --- Seniority -----------------------------------------------------------------------------
+seniority:
+  - level: internship
+    patterns: ['\bintern(ship)?s?\b', '\bco-?op\b', '\bsummer (analyst|associate|technology)\b', '\bplacement\b', '\bwork[- ]study\b', '\bstudent\b']
+  - level: executive
+    patterns: ['\b(vp|vice president|avp|svp|evp|director|head of|chief|cto|ceo|cio|ciso|president)\b', '\bexecutive director\b']
+  - level: manager
+    patterns: ['\bmanager\b', '\bmgr\b', '\b(engineering|software|technology|people|team|program|product) management\b(?! (trainee|program|associate|analyst|rotational))']
+  - level: principal
+    patterns: ['\bprincipal\b', '\bdistinguished\b', '\bfellow\b', '\barchitect\b']
+  - level: staff
+    patterns: ['(?<!technical )\bstaff\b(?! of)']
+  - level: senior
+    patterns: ['\bsenior\b', '\bsr\.?\b', '\blead\b', '\biii\b', '\biv\b', '\bv\b', '\b[3-9]\b', '\bl[4-9]\b', '\b(e|swe|sde|ic)[4-9]\b', '\bexperienced\b', '\bexpert\b', '\bspecialist\b(?! program)']
+  - level: mid
+    patterns: ['\bii\b', '\b2\b(?!0\d\d)', '\bl3\b', '\bmid[- ]?level\b', '\bintermediate\b', '\b(e|swe|sde|ic)3\b']
+  - level: new_grad
+    patterns:
+      - 'new[- ]?grad(uate)?s?'
+      - 'university grad(uate)?'
+      - 'recent grad(uate)?'
+      - 'college grad(uate)?'
+      - '\bgraduate\b'
+      - '\bcampus\b'
+      - 'early[- ]career'
+      - 'early in career'
+      - 'entry[- ]?level'
+      - '\bjunior\b'
+      - '\bjr\.?\b'
+      - '\bassociate\b'
+      - '\bi\b'
+      - '\b1\b'
+      - '\bl[12]\b'
+      - '\b(e|swe|sde|ic)[12]\b'
+      - 'class of 20(26|27)'
+      - '\b20(26|27)\b'
+      - 'rotational'
+      - 'development program'
+      - 'developme?nt programme'
+      - 'analyst program'
+      - 'technology analyst'
+      - 'technology associate'
+      - 'tech(nology)? development'
+      - 'apprentice(ship)?'
+      - '\bfresher\b'
+      - '\btrainee\b'
+      - 'leadership program'
+      - 'launch program'
+      - 'emerging talent'
+      - 'early talent'
+      - 'pathways'
+  # anything else → unknown (treated as "could be new-grad-eligible"; description decides)
+
+# --- Role family (ordered; first match wins) ------------------------------------------------
+# step_down: true marks "step down in technical depth" families (§9d) → floor failure.
+role_family:
+  - family: not_a_role               # evergreen pools / events, not reqs — out of scope with a clear reason
+    patterns: ['\bgeneral interest\b', '\btalent (community|network|pool|pipeline)\b', '\bfuture opportunit', '\bexpression of interest\b', '\bopen application\b', '\bevergreen\b', '\bhackathon\b', '\bdon.?t see (a|the) (role|position)\b', '\bjoin our talent\b', '\bprospective\b', '\binterested in (joining|working)\b', '\bhiring event\b(?!.*(engineer|developer))', '\bcareer fair\b', '\binfo session\b']
+  - family: other_nontech
+    step_down: true
+    patterns: ['\bexecutive assistant\b', '\badministrative assistant\b', '\bassistant to\b', '\bchief of staff\b', '\brevenue (technology|operations|analyst|enablement)\b', '\bsales (operations|engineer(ing)? manager)\b', '\bdeal desk\b', '\bcustomer (success|support|experience)\b', '\brecruit(er|ing)\b', '\bsourcer\b']
+  - family: software_engineering     # "Software Engineer, Quant Research" is a SWE seat on a quant team, not a quant seat
+    patterns: ['\bsoftware (engineer|developer|development)\b', '\bswe\b', '\bsde\b', '\bengineering manager\b', '\bsite reliability\b.*\bmanager\b']
+  - family: finance_nontech         # unmistakable finance seats, before any tech word can claim them
+    step_down: true
+    patterns: ['\bequity research\b', '\binvestment banking\b', '\bsales (and|&) trading\b', '\bwealth management\b', '\bprivate bank', '\basset management\b(?! (technology|engineering|software))', '\bcorporate banking\b', '\bcommercial banking\b(?! (technology|software))', '\bunderwriting\b', '\bfund accounting\b']
+  - family: quant
+    patterns: ['\bquant(itative)?\b', '\btrader\b', '\btrading (analyst|associate|developer|engineer|researcher|strategist)\b', '\bresearcher?\b.*\btrading\b', '\balgorithmic trading\b', '\bquantitative (researcher|developer|analyst|strategist|trader)\b']
+  - family: it_support
+    step_down: true
+    patterns: ['\bhelp ?desk\b', '\bservice desk\b', '\bdesktop support\b', '\bit support\b', '\bservicenow\b', '\btechnical support\b', '\btech support\b', '\bsupport (engineer|specialist|analyst|technician)\b', '\bfield (service|technician)\b', '\bit (technician|specialist|analyst|operations)\b', '\bsystems? administrator\b', '\bsysadmin\b', '\bend[- ]user\b']
+  - family: qa_manual
+    step_down: true
+    patterns: ['\bmanual (qa|test)', '\bqa (analyst|tester|specialist)\b', '\btest analyst\b', '\bquality assurance (analyst|specialist|tester)\b', '\btester\b']
+  - family: software_engineering   # SDET / test automation is engineering, not manual QA
+    subfamily: test_automation
+    patterns: ['\bsdet\b', '\bsoftware (engineer|developer) in test\b', '\btest automation\b', '\bautomation engineer\b', '\bqa engineer\b', '\bquality engineer\b']
+  - family: software_engineering
+    subfamily: forward_deployed
+    patterns: ['\bforward[- ]deployed\b', '\bfde\b']
+  - family: product
+    patterns: ['\bproduct manager\b', '\bproduct owner\b', '\bprogram manager\b', '\bproject manager\b', '\btpm\b', '\bscrum master\b', '\bproduct analyst\b', '\bproduct management\b']
+  - family: design
+    patterns: ['\b(ux|ui|product|visual|graphic) designer\b', '\bux researcher\b', '\bdesigner\b']
+  - family: hardware
+    patterns: ['\bhardware\b', '\bfpga\b', '\basic\b', '\brtl\b', '\bsilicon\b', '\belectrical engineer\b', '\bmechanical engineer\b', '\brf engineer\b', '\bdesign verification\b', '\bverification engineer\b', '\bphysical design\b', '\banalog\b', '\bcircuit\b', '\bsoc\b', '\bchip\b', '\bpcb\b', '\bmanufacturing engineer\b', '\bprocess engineer\b', '\bindustrial engineer\b', '\btest engineer\b', '\boptical\b', '\bphotonics\b', '\bgpu architecture\b', '\bdft\b', '(?<!software )(?<!ux )(?<!ui )(?<!product )(?<!game )(?<!web )\bdesign engineer\b', '\bdram\b', '\bmemory design\b', '\bsemiconductor\b', '\bsram\b', '\bnand\b', '\bsignal integrity\b', '\bpower (engineer|integrity)\b', '\bcpu architect', '\bmixed[- ]signal\b']
+  - family: security
+    patterns: ['\bsecurity\b', '\bcyber\b', '\binfosec\b', '\bpenetration\b', '\bpentest\b', '\bappsec\b', '\bsoc analyst\b', '\bthreat\b', '\bvulnerability\b', '\bred team\b']
+  - family: data_science
+    patterns: ['\bdata scien(ce|tist)\b', '\bdata analyst\b', '\bbusiness analyst\b', '\bbusiness intelligence\b', '\bbi (analyst|developer|engineer)\b', '\banalytics (engineer|analyst)\b', '\bdecision scien', '\bstatistic', '\breporting analyst\b', '\binsights? analyst\b']
+  - family: data_engineering
+    patterns: ['\bdata engineer\b', '\bdata platform\b', '\betl\b', '\bdata infrastructure\b', '\bdata pipeline\b']
+  - family: ml_ai
+    patterns: ['\bmachine learning\b', '\bml engineer\b', '\bmle\b', '\bai engineer\b', '\bai/ml\b', '\bml/ai\b', '\bapplied scientist\b', '\bresearch scientist\b', '\bresearch engineer\b', '\bdeep learning\b', '\bnlp\b', '\bcomputer vision\b', '\bllm\b', '\bgenai\b', '\bgenerative ai\b', '\bai research\b', '\bperception\b', '\bautonomy\b']
+  - family: devops_sre
+    patterns: ['\bsite reliability\b', '\bsre\b', '\bdevops\b', '\bdevsecops\b', '\bcloud engineer\b', '\binfrastructure engineer\b', '\bnetwork engineer\b', '\brelease engineer\b', '\bbuild engineer\b', '\bproduction engineer\b', '\bsystems engineer\b', '\bplatform engineer\b', '\bcloud (infrastructure|operations)\b', '\bobservability\b']
+  - family: solutions
+    patterns: ['\bsolutions? (engineer|architect|consultant)\b', '\bsales engineer\b', '\bcustomer engineer\b', '\bimplementation (engineer|consultant|specialist)\b', '\bpre-?sales\b', '\btechnical account\b', '\bcustomer success\b', '\bprofessional services\b', '\bdeployment strategist\b', '\bintegration engineer\b', '\btechnical consultant\b']
+  - family: finance_nontech
+    step_down: true
+    patterns: ['\binvestment banking\b', '\bfinancial analyst\b', '\baccountant\b', '\baccounting\b', '\baudit\b', '\bunderwrit', '\bwealth\b', '\bportfolio (manager|analyst)\b', '\bequity research\b', '\bcredit analyst\b', '\brisk analyst\b', '\bcompliance\b', '\btreasury\b', '\bcontroller\b', '\btax\b', '\bactuar', '\bbanker\b', '\bcapital markets\b', '\bsales and trading\b']
+  - family: other_nontech
+    step_down: true
+    patterns: ['\brecruit', '\bpeople (business|partner|operations|team|experience)\b', '\btalent\b', '\bmarketing\b', '\bsales\b', '\baccount (executive|manager)\b', '\bhr\b', '\bhuman resources\b', '\blegal\b', '\bparalegal\b', '\boperations (analyst|associate|coordinator)\b', '\bcustomer (service|support)\b', '\bwriter\b', '\bcommunications\b', '\bsupply chain\b', '\blogistics\b', '\bprocurement\b', '\bfacilities\b', '\bnurse\b', '\bclinical\b', '\bpharmac', '\bdriver\b', '\bwarehouse\b', '\bretail\b', '\bstore\b', '\bbarista\b', '\bcashier\b', '\bchef\b', '\bcook\b', '\bsecurity guard\b', '\bjanitor\b', '\bcustodian\b', '\bteacher\b', '\binstructor\b', '\breceptionist\b', '\bbusiness development\b', '\bteller\b', '\bbranch\b', '\bcounsel\b', '\blawyer\b', '\battorney\b', '\bparalegal\b', '\brisk\b', '\brelationship (manager|executive|banker)\b', '\bclient (success|partner|service|advisor)\b', '\bambassador\b', '\bservicing\b', '\bcollections\b', '\bpricing\b', '\bbilling\b', '\bbuyer\b', '\btechnician\b', '\bproducer\b', '\bbanking\b', '\bpayments? (product|operations|specialist)\b', '\bfraud\b', '\bcredit\b', '\blending\b', '\bmortgage\b', '\binsurance\b', '\bclaims\b', '\bactuarial\b', '\bbrand\b', '\bcampaign\b', '\bgrowth\b', '\bcopywriter\b', '\beditor\b', '\bjournalist\b', '\bpolicy\b', '\bgovernment (affairs|relations)\b', '\bpublic (affairs|policy|relations)\b', '\btranslator\b', '\binterpreter\b', '\bsecurity (guard|officer)\b', '\bpilot\b', '\bmechanic\b', '\btechnical writer\b', '\bdocumentation\b']
+  - family: software_engineering
+    patterns:
+      - '\bsoftware\b'
+      - '\bswe\b'
+      - '\bsde\b'
+      - '\bdeveloper\b'
+      - '\bprogrammer\b'
+      - '\bmember of technical staff\b'
+      - '\bmts\b'
+      - '\bfull[- ]?stack\b'
+      - '\bback[- ]?end\b'
+      - '\bfront[- ]?end\b'
+      - '\bmobile\b'
+      - '\bios\b'
+      - '\bandroid\b'
+      - '\bweb (engineer|developer)\b'
+      - '\bapplications? (engineer|developer)\b'
+      - '\bapplication development\b'
+      - '\btechnology (analyst|associate|development|program|graduate)\b'
+      - '\btechnologist\b'
+      - '\bengineering (analyst|associate|program)\b'
+      - '\bcoding\b'
+      - '\bcomputer scien'
+      - '\btech(nology)? (rotational|leadership|launch)\b'
+      - '\bapi\b'
+      - '\bembedded\b'
+      - '\bfirmware\b'
+      - '\bsimulation\b'
+      - '\bgame(play)? (engineer|developer|programmer)\b'
+      - '\bgraphics (engineer|developer)\b'
+      - '\bcompiler\b'
+      - '\bkernel\b'
+      - '\bdistributed systems\b'
+      - '\btechnical lead\b'
+      - '\bengineer(ing)?\b'         # generic catch-all LAST in this family
+
+  - family: other_nontech            # weak level/function words — only when no tech word matched above
+    step_down: true
+    patterns: ['\bofficer\b', '\bexecutive\b', '\bdirector\b', '\bvice president\b', '\bpresident\b', '\bmanager\b', '\blead\b(?! (software|engineer|developer))', '\banalyst\b', '\bassociate\b(?! (software|engineer|developer))', '\bgeneralist\b', '\bchief\b', '\bhead of\b', '\bprincipal architect\b', '\barchitect\b', '\bstrateg', '\boperations\b', '\bprogram\b(?! (engineer|developer|software))', '\bcoordinator\b', '\bprofessional\b', '\bspecialist\b', '\binsights\b', '\bplanning\b', '\bplanner\b', '\bconsultant\b', '\badvisor\b', '\bstrategy\b', '\bpartnerships?\b', '\bcommunity\b', '\bevent\b', '\bassistant\b', '\badministrative\b', '\bcontent\b']
+
+# --- Software engineering sub-families (applied when family == software_engineering) ------
+subfamily:
+  - name: forward_deployed
+    patterns: ['\bforward[- ]deployed\b', '\bfde\b']
+  - name: embedded
+    patterns: ['\bembedded\b', '\bfirmware\b', '\brtos\b', '\bdevice\b', '\biot\b']
+  - name: low_latency_systems
+    patterns: ['\blow[- ]latency\b', '\bhigh[- ]frequency\b', '\bhft\b', '\bhigh[- ]performance computing\b', '\bhpc\b', '\bkernel\b', '\bcompiler\b', '\bc\+\+', '\brust\b']
+  - name: distributed_infra
+    patterns: ['\bdistributed\b', '\binfrastructure\b', '\bplatform\b', '\bcloud\b', '\bstorage\b', '\bdatabase\b', '\bnetworking\b', '\bcore systems\b', '\bsystems software\b']
+  - name: mobile
+    patterns: ['\bmobile\b', '\bios\b', '\bandroid\b', '\breact native\b', '\bflutter\b']
+  - name: frontend
+    patterns: ['\bfront[- ]?end\b', '\bui engineer\b', '\bweb (engineer|developer)\b', '\bjavascript\b', '\breact\b', '\bangular\b', '\bvue\b']
+  - name: backend
+    patterns: ['\bback[- ]?end\b', '\bserver[- ]side\b', '\bapi\b', '\bjava\b', '\.net\b', '\bc#', '\bpython\b', '\bgolang?\b', '\bservices?\b']
+  - name: fullstack
+    patterns: ['\bfull[- ]?stack\b', '\bapplication', '\bweb\b']
+  - name: test_automation
+    patterns: ['\bsdet\b', '\btest\b', '\bqa\b', '\bquality\b']
+  - name: gaming_graphics
+    patterns: ['\bgame\b', '\bgraphics\b', '\bunreal\b', '\bunity\b', '\brendering\b']
+  # default → generalist
+
+# --- Program type --------------------------------------------------------------------------
+program_type:
+  - name: rotational
+    patterns: ['\brotational?\b', '\brotation\b', '\bdevelopment program\b', '\bleadership program\b', '\btdp\b', '\bldp\b', '\btech(nology)? (development|leadership) program\b', '\blaunch program\b', '\bpathways\b']
+  - name: analyst_program
+    patterns: ['\banalyst program\b', '\btechnology analyst\b', '\bengineering analyst\b', '\btechnology associate\b', '\bassociate program\b', '\bgraduate program\b', '\bgraduate scheme\b']
+  - name: apprenticeship
+    patterns: ['\bapprentice(ship)?\b']
+  - name: new_grad_program
+    patterns: ['new[- ]?grad', 'university grad', 'early[- ]career', 'campus', 'emerging talent', 'early talent']
+  # default → standard
+
+# --- Employment type hints from title ------------------------------------------------------
+employment_type:
+  - type: internship
+    patterns: ['\bintern(ship)?s?\b', '\bco-?op\b', '\bsummer (analyst|associate)\b']
+  - type: contract
+    patterns: ['\bcontract(or)?\b', '\bcontingent\b', '\btemp(orary)?\b', '\bfreelance\b', '\bc2c\b', '\bw2 only\b', '\b1099\b']
+  - type: part_time
+    patterns: ['\bpart[- ]time\b', '\bpt\b(?=.*(hours|shift))']
+
+# --- Tech tags detectable from title or description ----------------------------------------
+tech_tags:
+  python: ['\bpython\b']
+  java: ['\bjava\b(?!script)']
+  csharp: ['\bc#', '\bc-sharp\b', '\bcsharp\b']
+  dotnet: ['\.net\b', '\bdotnet\b', '\basp\.net\b', '\bnet core\b', '\bnet framework\b']
+  javascript: ['\bjavascript\b', '\bjs\b', '\bnode(\.js)?\b']
+  typescript: ['\btypescript\b']
+  react: ['\breact(\.js)?\b']
+  angular: ['\bangular\b']
+  go: ['\bgolang\b', '\bgo\b(?= (programming|language|developer|engineer|experience|proficiency))', '\(go\)', '\bgo,']
+  rust: ['\brust\b']
+  cpp: ['\bc\+\+', '\bcpp\b']
+  c: ['\bc\b(?=[ /,]*(c\+\+|programming|language))', '\bembedded c\b']
+  kubernetes: ['\bkubernetes\b', '\bk8s\b']
+  docker: ['\bdocker\b', '\bcontainer']
+  aws: ['\baws\b', '\bamazon web services\b']
+  azure: ['\bazure\b']
+  gcp: ['\bgcp\b', '\bgoogle cloud\b']
+  sql: ['\bsql\b', '\bpostgres', '\bmysql\b', '\boracle db\b', '\bsql server\b']
+  nosql: ['\bnosql\b', '\bmongodb\b', '\bdynamodb\b', '\bcassandra\b', '\bredis\b']
+  spark: ['\bspark\b', '\bhadoop\b', '\bkafka\b', '\bflink\b']
+  ml: ['\bmachine learning\b', '\btensorflow\b', '\bpytorch\b', '\bscikit\b', '\bllm', '\bdeep learning\b']
+  rest_api: ['\brest(ful)?\b', '\bapi design\b', '\bmicroservices?\b', '\bgrpc\b', '\bgraphql\b']
+  ci_cd: ['\bci/cd\b', '\bcicd\b', '\bjenkins\b', '\bgithub actions\b', '\bgitlab ci\b']
+  swift_kotlin: ['\bswift\b', '\bkotlin\b', '\bobjective-c\b']
+  scala: ['\bscala\b']
+  ruby: ['\bruby\b', '\brails\b']
+  php: ['\bphp\b']
+  terraform: ['\bterraform\b', '\binfrastructure as code\b', '\biac\b']
+  linux: ['\blinux\b', '\bunix\b']
+  distributed_systems: ['\bdistributed systems?\b', '\blarge[- ]scale systems?\b', '\bhigh[- ]availability\b', '\bfault[- ]toleran']
+  low_latency: ['\blow[- ]latency\b', '\bhigh[- ]frequency\b', '\bultra[- ]low\b', '\bnanosecond', '\bmicrosecond']
+  finance_domain: ['\bfinancial (modeling|services|markets|products)\b', '\bcapital markets\b', '\btrading\b', '\bpayments?\b', '\bbanking\b', '\bfintech\b', '\bderivatives\b', '\bequities\b', '\bfixed income\b', '\bportfolio\b', '\brisk (management|models?)\b', '\bvaluation\b', '\bdcf\b']
+  tableau: ['\btableau\b', '\bpower ?bi\b']
+  embedded: ['\bembedded\b', '\braspberry pi\b', '\bmicrocontroller\b', '\bfirmware\b', '\brtos\b']

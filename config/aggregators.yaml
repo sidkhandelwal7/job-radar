@@ -1,0 +1,43 @@
+# Community aggregator repos (§6b). Polled every 15 min via raw.githubusercontent.com with ETags.
+# Each becomes a pseudo-company source (provider: github) whose rows carry their own company names,
+# which are resolved against companies.yaml so dream-list / tier flags still apply.
+#
+# kind: simplify_json  → structured .github/scripts/listings.json (preferred; exact ids, degrees, sponsorship)
+#       markdown_table → README table parser (Company | Role | Location | link | date)
+# link_quality: direct      → the link goes to the employer's posting
+#               third_party → the link goes to the aggregator's own page (dedupe prefers direct)
+
+aggregators:
+  - slug: SimplifyJobs/New-Grad-Positions
+    name: Simplify — New Grad Positions
+    kind: simplify_json
+    url: https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json
+    readme_url: https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/README.md
+    priority: 1
+    link_quality: direct
+  - slug: vanshb03/New-Grad-2027
+    name: vanshb03 — New Grad 2027
+    kind: markdown_table
+    url: https://raw.githubusercontent.com/vanshb03/New-Grad-2027/main/README.md
+    priority: 2
+    link_quality: direct
+  - slug: zapplyjobs/New-Grad-Software-Engineering-Jobs-2027
+    name: zapplyjobs — New Grad SWE 2027
+    kind: markdown_table
+    url: https://raw.githubusercontent.com/zapplyjobs/New-Grad-Software-Engineering-Jobs-2027/main/README.md
+    priority: 3
+    link_quality: direct
+  - slug: zapplyjobs/New-Grad-Jobs-2027
+    name: zapplyjobs — New Grad Jobs 2027 (all roles)
+    kind: markdown_table
+    url: https://raw.githubusercontent.com/zapplyjobs/New-Grad-Jobs-2027/main/README.md
+    priority: 4
+    link_quality: direct
+  - slug: jobright-ai/2026-Software-Engineer-New-Grad
+    name: jobright — SWE New Grad (2026 repo; no 2027 repo exists yet)
+    kind: markdown_table
+    url: https://raw.githubusercontent.com/jobright-ai/2026-Software-Engineer-New-Grad/master/README.md
+    priority: 5
+    link_quality: third_party        # links go to jobright.ai, which then links to the employer
+  # ambicuity/New-Grad-Jobs — listed in the spec but returns 404 (2026-08-20). The monthly topic
+  # sweep (`radar discover --topics`) proposes replacements for approval.

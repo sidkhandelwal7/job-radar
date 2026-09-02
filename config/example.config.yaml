@@ -1,0 +1,227 @@
+# Job Radar — operator configuration (EXAMPLE).
+#
+# Copy this file to config/config.yaml and edit it. Every number that drives ranking lives here;
+# after an edit run `radar rescore` (no re-fetching). Without a config/config.yaml the tool runs on
+# this example so a fresh clone works end to end. All values below are synthetic placeholders.
+
+operator:
+  name: Alex Example
+  email: candidate@example.com               # used only in the User-Agent contact string
+  school: Example University
+  graduation: 2027-05-01
+  gpa: 3.5
+  citizenship: US
+  needs_sponsorship: false
+  resume_path: examples/sample_resume.md     # .pdf, .md or .txt; grounds the fit scorer and the kits
+  earliest_start: 2027-06-01
+  preferred_start: 2027-08-01
+  # §1c — a rotational-program title at your current employer is NEVER evidence of quant capability.
+  treat_as_quant_candidate: false
+  leetcode_level: medium                     # weighted lightly; see modifiers.leetcode_max_share_of_winnability
+  referral_availability: medium              # §1d — broad, not company-specific (high | medium | low)
+
+# Who you are, for the deterministic fit scorer and the LLM prompts. The code carries no
+# candidate-specific assumptions: edit these and nothing else needs to change.
+profile:
+  summary: a computer-science senior with production Python and TypeScript experience
+  skills:                                    # tag → proficiency 0..1 (+ optional label and resume terms)
+    python:              { proficiency: 1.0, label: Python }
+    typescript:          { proficiency: 0.8, label: TypeScript }
+    javascript:          { proficiency: 0.8, label: JavaScript }
+    react:               { proficiency: 0.7, label: React }
+    sql:                 { proficiency: 0.9, label: SQL }
+    docker:              { proficiency: 0.7, label: Docker }
+    ci_cd:               { proficiency: 0.7, label: CI/CD, terms: ["ci/cd", "github actions"] }
+    aws:                 { proficiency: 0.5, label: cloud (AWS), terms: ["aws", "cloud"] }
+    linux:               { proficiency: 0.6, label: Linux }
+    java:                { proficiency: 0.5, label: Java }
+    go:                  { proficiency: 0.2, label: Go }
+    cpp:                 { proficiency: 0.2, label: C++ }
+    rust:                { proficiency: 0.0, label: Rust }
+    kubernetes:          { proficiency: 0.2, label: Kubernetes at depth }
+    distributed_systems: { proficiency: 0.2, label: large-scale distributed systems }
+    low_latency:         { proficiency: 0.0, label: low-latency systems }
+  edge_tags: [python, typescript]            # required tags that are a genuine advantage (weighted 1.6×)
+  gap_tags: [go, rust, cpp, low_latency, distributed_systems]   # required tags that hurt (1.4×)
+  edges:                                     # prose for the LLM gap analysis and application kits
+    - production Python services with measured latency wins
+    - full-stack TypeScript/React features shipped end to end
+  gaps:
+    - no Go/Rust/C++
+    - no large-scale distributed systems
+  domain_tag: ""                             # e.g. finance_domain — bonus for postings in domain_categories
+  domain_categories: []                      # e.g. [bank_and_exchange_tech, fintech_infrastructure]
+  big_tech_stack_note: "typical big-tech codebases and interviews lean on Java/C++/Go; the resume's depth is Python/TypeScript — prep the language switch explicitly"
+
+# §9a — the standing offer, the baseline everything is compared against.
+baseline:
+  employer: Example Corp
+  program: Software Engineer I (return offer)
+  metro: chicago                             # key in config/metros.yaml; its COL index and tax jurisdiction are the reference
+  state: IL
+  base_salary: 85000
+  signing_bonus: 5000
+  equity_annual: 0
+  decision_deadline: 2026-10-15              # hard
+  start_date: 2027-07-06
+  signed: false                              # flip when you sign; starts the switching-cost clock
+
+comp_gates:                                  # on BASE salary (nominal, $/yr)
+  instant_yes: 100000                        # clearly_better regardless of location, when comp is posted/confident
+  parity: 85000                              # usually = baseline.base_salary
+  hard_floor: 75000                          # below this (upper bound of range) → suppressed, visible in one click
+  instant_yes_requires_confidence: 0.7       # inferred comp can't trigger instant_yes unless confidence ≥ this
+  international_high_pay_threshold: 150000   # `high_pay_international` view surfaces non-US roles above this
+
+# §9b — location utility premium: annual $ a year in that metro is worth to you, added back AFTER
+# tax and purchasing power. All zero here: the tool ranks on money alone until you state a
+# preference (e.g. new_york: 25000 means "I'd pay $25k/year to live in New York").
+location_utility_premium:
+  new_york: 0
+  san_francisco: 0
+  seattle: 0
+  washington_dc: 0
+  other_major_tech_hub: 0                    # boston, austin, chicago, los_angeles, denver
+  remote: 0                                  # genuinely neutral
+  elsewhere: 0
+  family_proximity_weight: 0
+  col_uplift_cap: 0.25                       # D28: a cheap metro can raise effective value by at most +25% of nominal
+                                             #   (you can't bank all of a cheap city's savings); COL *deflation* is never capped
+
+# Rent-weighted COL index (only ratios matter). Versioned; see config/metros.yaml for the full table.
+col_index_version: 2026-08
+tax_tables_version: 2026-08
+
+# §10 — sub-score weights (must sum to 1.0)
+weights:
+  comp_score: 0.26
+  career_capital_score: 0.26
+  fit_score: 0.20
+  winnability_score: 0.14
+  location_score: 0.08
+  culture_score: 0.06
+
+modifiers:
+  low_comp_confidence_threshold: 0.3
+  low_comp_confidence_multiplier: 0.9
+  secured_referral_multiplier: 1.05
+  stretch_req_winnability_multiplier: 0.85   # kept for config compatibility; stretch is a gate now (D63)
+  dream_list_career_capital_multiplier: 1.10
+  quant_trading_firm_winnability_cap: 0.25   # §1c
+  leetcode_max_share_of_winnability: 0.15    # §1c
+
+# §2 — target categories, 1 = most wanted. Drives career_capital_score's dominant term. Illustrative.
+target_ranking:
+  big_tech_swe: 1
+  fintech_infrastructure: 2
+  elite_infra_startup: 3
+  bank_and_exchange_tech: 4
+  ai_lab: 5
+  defense_and_gov_tech: 6
+  quant_dev_research_trading: 7
+  other: 8
+
+# Registry slugs (config/companies.yaml). Dream-list companies get a P0 on new-grad engineering reqs
+# and are floor-exempt. Empty by default.
+dream_list: []
+floor_exempt_companies: []
+
+# Suppressed with a visible reason, never deleted.
+blocked_companies: []
+blocked_metros: []
+
+scope:
+  include_stretch_1_2_yoe: true
+  max_years_experience_in_scope: 2
+  hard_exclude:
+    clearance_required: true
+    advanced_degree_required: true
+    internship: true
+    contract: true
+    part_time: true
+    unpaid: true
+  international_default: exclude             # kept in master list, hidden from default views
+
+# §10 — EV terms
+ev:
+  horizon_years: 3
+  hourly_opportunity_cost: 40                # $/hr of your prep time
+  career_capital_premium_per_point: 4000     # $ of 3-yr value per career-capital point above baseline
+
+# §10 — switching friction: the itemized cost of walking away from the baseline offer after
+# accepting it. All zero here; set the terms that are real for you (a clawback is real money).
+switching_friction:
+  signing_bonus_clawback: 0                  # repayable if you don't start
+  goodwill_cost_at_signing: 0                # $-equivalent of the burnt bridge, day 0
+  goodwill_cost_at_start: 0                  # same, the week before start; interpolated on a convex curve
+  curve_exponent: 2.0                        # 1 = linear rise, 2 = stays cheap longer then climbs
+  university_channel_cost: 0                 # reputational cost with your school's career channels
+  same_market_penalty: 0                     # postings flagged same_market_as_baseline_offer (metros.yaml baseline_market)
+  cheap_zone_ends: 2026-12-31                # the decision calendar marks this
+
+# Throughput — the queue throttles recommendations to these
+throughput:
+  applications_per_week: 8
+  prep_hours_per_week: 10
+  today_bucket_max: 10
+
+# §18 — model routing. Pinned, never inherited. Startup assertion refuses premium-tier models for scheduled work.
+llm:
+  enabled: true                              # false → deterministic-only scoring, nothing calls the LLM
+  classifier_model: haiku
+  enrichment_model: sonnet
+  drafting_model: sonnet
+  bare: false                                # D27: --bare forces API-key auth (metered billing) — never used with the subscription login
+  max_calls_per_run: 200                     # ceiling for `radar enrich` / `radar rescore --enrich`
+  calls_per_cycle: 12                        # small budget spent by every scheduled `radar cycle` (the classifier model batches 6 postings/call)
+  cache_dir: data/cache/llm
+
+embeddings:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  cache_dir: data/cache/embeddings
+
+fetch:
+  user_agent: "job-radar/0.1 (personal job-search tool; +mailto:candidate@example.com)"
+  concurrency: 12
+  per_host_concurrency: 3
+  timeout_seconds: 30
+  detail_fetch: title_prefilter              # title_prefilter | all_new | none — which Workday/Oracle postings get a 2nd request for the description.
+                                             #   title_prefilter skips senior/manager/non-engineering titles (out of scope regardless); see DECISIONS.md D3
+  cadences:                                  # minutes
+    dream_list: 15
+    tier1: 15
+    tier2: 60
+    long_tail: 360
+    aggregators: 15
+  reprobe_empty_after_days: 14
+
+links:
+  verify_after_hours: 48                     # re-verify when a posting is viewed and older than this
+  sweep_every_hours: 6
+  per_host_rps: 1.0
+
+actions:                                     # cloud backstop (D52): launchd on the laptop is primary
+  invocation_target_per_month: 800           # the schedule in .github/workflows/fetch.yml ≈ 600
+  github_user: ""                            # your GitHub login, for `radar actions-usage --billing`
+
+notify:
+  quiet_hours_et: [23, 8]                    # P0 breaks quiet hours; P1 waits for the digest
+  p0_max_per_week_target: 3                  # the weekly digest says so out loud if exceeded
+  digest_time_et: "08:00"
+  weekly_digest_day: sunday
+  weekly_digest_hour_et: 18
+  p0_triggers:                               # each individually toggleable (§20)
+    dream_list_new_grad: true                # dream-list company opens a new-grad engineering req
+    clearly_better_closing: true             # clearly_better and est. days-to-close < 5
+    shortlist_deadline_72h: true             # a shortlisted role's deadline moved inside 72 h
+    saved_filter: true                       # a saved filter marked alert: p0 matches a new posting
+  # Channels are configured by environment variables or data/secrets.env only (never in git):
+  #   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID          Telegram bot with inline buttons (build first)
+  #   IOS_SHORTCUT_WEBHOOK_URL                       iOS Shortcuts webhook (no inline actions; less reliable)
+  #   SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, NOTIFY_EMAIL_TO   email digests (always-works fallback)
+
+paths:
+  data_dir: data
+  db: data/radar.db
+  raw_dir: data/raw
+  backups_dir: data/backups

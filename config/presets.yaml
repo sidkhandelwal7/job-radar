@@ -1,0 +1,67 @@
+# Saved-filter presets (§12). Query language → see `radar filter --help` / radar/query.py.
+# `default_view: false` means the preset shows the master view (no suppressions) for its query.
+# alert: p0 | p1 | null — Phase 5 notifications for new matches (p0 breaks quiet hours).
+presets:
+  - name: Apply First
+    query: "rank >= 1"
+    sort: "apply_priority_rank ASC"
+    note: "The default view: what's left to do, best first. Applied/dismissed/snoozed rows leave it."
+  - name: Clearly Better
+    query: "beats_baseline:clearly_better in_scope"
+    sort: "priority DESC"
+  - name: Arguably Better (needs a call)
+    query: "beats_baseline:arguably_better in_scope"
+    sort: "priority DESC"
+    note: "Where your real decisions live."
+  - name: Dream List
+    query: "dream"
+    sort: "priority DESC"
+    # no `alert:` here — dream-list *new-grad engineering* reqs are already a built-in P0 trigger;
+    # alerting on every dream-list req would page you for "Software Engineer II" (D48)
+  - name: Big Tech
+    query: "category:big_tech"
+    sort: "priority DESC"
+  - name: Banks & Exchanges
+    query: "category:banks"
+    sort: "priority DESC"
+  - name: Fintech Infra
+    query: "category:fintech"
+    sort: "priority DESC"
+  - name: NYC
+    query: "metro:nyc"
+    sort: "priority DESC"
+  - name: No-Income-Tax States
+    query: "tax_rate = 0"
+    sort: "priority DESC"
+    note: "WA, TX, FL, NV, TN… — equal base nets meaningfully more than NYC/SF."
+  - name: Closing This Week
+    query: "(days_to_close <= 7 OR est_days_to_close <= 7) rank >= 1"
+    sort: "urgency_score DESC"
+  - name: Best Resume Fit
+    query: "fit >= 0.7 in_scope"
+    sort: "fit_score DESC"
+  - name: Watchlist
+    query: "floor:fail (career_capital >= 0.8 OR fit >= 0.7)"
+    sort: "career_capital_score DESC"
+    default_view: false
+    note: "Failed the comp floor but strong on career capital or fit. Weekly digest only, no pushes."
+  - name: Applied
+    query: "applied"
+    sort: "status_changed_at DESC"
+    default_view: false
+  - name: Everything (Master)
+    query: ""
+    sort: "first_seen_at DESC"
+    default_view: false
+  - name: Floor Failures Audit
+    query: "floor:fail"
+    sort: "first_seen_at DESC"
+    default_view: false
+  - name: High-Pay International
+    query: "international base >= 150k"
+    sort: "base_est DESC"
+    default_view: false
+  - name: Stretch (2 YoE)
+    query: "stretch"
+    sort: "priority DESC"
+    note: "Opt-in: roles asking for ~2 years. Never in the queue or notifications (D63)."
