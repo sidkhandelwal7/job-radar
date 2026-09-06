@@ -1,1 +1,2 @@
 {"started_at":"2026-09-06T03:57:00Z","host":"actions","sources":21,"ok":21,"not_modified":0,"failed":0,"new":23822,"p0":0,"p1":87,"requests":318,"bytes":127089257,"elapsed_s":187.5,"seed":true}
+{"started_at":"2026-09-06T08:35:41Z","host":"actions","sources":21,"ok":21,"not_modified":5,"failed":0,"new":146,"p0":0,"p1":0,"requests":36,"bytes":87566405,"elapsed_s":20.2,"seed":false}
