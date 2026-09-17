@@ -61,3 +61,4 @@
 {"started_at":"2026-09-17T00:55:51Z","host":"actions","sources":21,"ok":21,"not_modified":3,"failed":0,"new":306,"p0":0,"p1":0,"requests":321,"bytes":123402470,"elapsed_s":99.9,"seed":false}
 {"started_at":"2026-09-17T06:48:57Z","host":"actions","sources":21,"ok":21,"not_modified":6,"failed":0,"new":230,"p0":0,"p1":0,"requests":32,"bytes":92914420,"elapsed_s":41.3,"seed":false}
 {"started_at":"2026-09-17T12:48:14Z","host":"actions","sources":21,"ok":21,"not_modified":3,"failed":0,"new":371,"p0":0,"p1":0,"requests":321,"bytes":123522536,"elapsed_s":114.0,"seed":false}
+{"started_at":"2026-09-17T17:30:18Z","host":"actions","sources":21,"ok":21,"not_modified":2,"failed":0,"new":626,"p0":0,"p1":4,"requests":35,"bytes":106737763,"elapsed_s":141.4,"seed":false}
