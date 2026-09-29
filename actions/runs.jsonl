@@ -126,3 +126,4 @@
 {"started_at":"2026-09-29T10:56:27Z","host":"actions","sources":21,"ok":21,"not_modified":5,"failed":0,"new":376,"p0":0,"p1":0,"requests":317,"bytes":123794416,"elapsed_s":98.5,"seed":false}
 {"started_at":"2026-09-29T16:41:28Z","host":"actions","sources":21,"ok":21,"not_modified":1,"failed":0,"new":639,"p0":0,"p1":0,"requests":36,"bytes":116632706,"elapsed_s":48.3,"seed":false}
 {"started_at":"2026-09-29T18:28:45Z","host":"actions","sources":21,"ok":21,"not_modified":2,"failed":0,"new":351,"p0":0,"p1":0,"requests":317,"bytes":126892602,"elapsed_s":109.6,"seed":false}
+{"started_at":"2026-09-29T22:32:47Z","host":"actions","sources":21,"ok":21,"not_modified":3,"failed":0,"new":576,"p0":0,"p1":4,"requests":36,"bytes":108227043,"elapsed_s":44.0,"seed":false}
